@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#3f3560" />
   <meta name="color-scheme" content="light" />
-  <meta name="description" content="忖度くん。直感で扉をひらくと、宇宙の静けさから、いまの魂へやさしい光の言葉が届きます。" />
-  <meta property="og:title" content="忖度くん — 魂に届く光のことば" />
-  <meta property="og:description" content="忖度くん。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
+  <!--
+    RENAME: edit only the product string in #brand (channel too, if it changes).
+    In-app copy reads that JSON. The title and social tags below repeat it for
+    link previews, which do not run script.
+  -->
+  <script type="application/json" id="brand">{"product":"魂のひとこと","channel":"ほんここチャンネル"}</script>
+  <meta name="description" content="魂のひとこと。直感で扉をひらくと、宇宙の静けさから、いまの魂へやさしい光の言葉が届きます。" />
+  <meta property="og:title" content="魂のひとこと — ほんここチャンネル" />
+  <meta property="og:description" content="魂のひとこと。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:site_name" content="ほんここチャンネル" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="忖度くん — 魂に届く光のことば" />
-  <meta name="twitter:description" content="忖度くん。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
-  <meta name="apple-mobile-web-app-title" content="忖度くん" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233f3560'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23d4b36a' stroke-width='1.5'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='26' fill='%23f6e7c1' font-family='serif'%3E%E6%80%AE%3C/text%3E%3C/svg%3E" />
-  <title>忖度くん — 魂に届く光のことば</title>
+  <meta name="twitter:title" content="魂のひとこと — ほんここチャンネル" />
+  <meta name="twitter:description" content="魂のひとこと。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
+  <meta name="apple-mobile-web-app-title" content="魂のひとこと" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233f3560'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23d4b36a' stroke-width='1.5'/%3E%3Cpath fill='%23f6e7c1' d='M38 16a16 16 0 1 0 0 32 12 12 0 1 1 0-32z'/%3E%3C/svg%3E" />
+  <title>魂のひとこと — ほんここチャンネル</title>
   <style>
     :root {
       --bg: #f4efe8;
@@ -123,10 +129,10 @@
     }
     h1 {
       margin: 12px 0 0;
-      font-size: 1.72rem;
+      font-size: 1.55rem;
       font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: 0.16em;
+      line-height: 1.4;
+      letter-spacing: 0.08em;
       text-wrap: balance;
     }
     .lead {
@@ -385,9 +391,9 @@
   <div class="shell">
     <header>
       <p class="sigil" aria-hidden="true">✦　☾　✦</p>
-      <div class="brand">ほんここチャンネル</div>
-      <h1>忖度くん</h1>
-      <p class="lead">魂に届く、光のことば</p>
+      <div class="brand" data-brand="channel">ほんここチャンネル</div>
+      <h1 data-brand="product">魂のひとこと</h1>
+      <p class="lead">直感でひらく、光の導き</p>
       <p class="sub">直感で扉をひらいて。<br />宇宙の静けさから、いまのあなたへ。</p>
     </header>
 
@@ -403,10 +409,39 @@
       <noscript><p class="q-title">光の言葉を受け取るには、JavaScriptを有効にしてください。</p></noscript>
     </main>
 
-    <p class="foot">ほんここチャンネル · オリジナルの光の言葉<br />医療の助言でも、確約された予言でもありません。</p>
+    <p class="foot"><span data-brand="product">魂のひとこと</span> · <span data-brand="channel">ほんここチャンネル</span><br />オリジナルの光の言葉<br />医療の助言でも、確約された予言でもありません。</p>
   </div>
 
   <script>
+    const BRAND = JSON.parse(document.getElementById("brand").textContent);
+    const PRODUCT_NAME = BRAND.product;
+    const CHANNEL_NAME = BRAND.channel;
+
+    function setMeta(selector, content) {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute("content", content);
+    }
+
+    function applyBrand() {
+      const pageTitle = PRODUCT_NAME + " — " + CHANNEL_NAME;
+      const description = PRODUCT_NAME + "。直感で扉をひらくと、宇宙の静けさから、いまの魂へやさしい光の言葉が届きます。";
+      const share = PRODUCT_NAME + "。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。";
+      document.title = pageTitle;
+      setMeta('meta[name="description"]', description);
+      setMeta('meta[property="og:title"]', pageTitle);
+      setMeta('meta[property="og:description"]', share);
+      setMeta('meta[property="og:site_name"]', CHANNEL_NAME);
+      setMeta('meta[name="twitter:title"]', pageTitle);
+      setMeta('meta[name="twitter:description"]', share);
+      setMeta('meta[name="apple-mobile-web-app-title"]', PRODUCT_NAME);
+      document.querySelectorAll("[data-brand='product']").forEach((el) => {
+        el.textContent = PRODUCT_NAME;
+      });
+      document.querySelectorAll("[data-brand='channel']").forEach((el) => {
+        el.textContent = CHANNEL_NAME;
+      });
+    }
+
     const questions = [
       {
         id: "theme",
@@ -1055,6 +1090,7 @@
 
     function classifyWho(who) {
       const w = String(who || "");
+      if (w === PRODUCT_NAME || w === CHANNEL_NAME || /ほんここ|^$/.test(w)) return "honkoko";
       if (/ハイヤー|高次/.test(w)) return "higherSelf";
       if (/未来|あとの自分|一年後|十年後|来世/.test(w)) return "futureSelf";
       if (/ご先祖|祖先|先祖|おじい|おばあ|じいちゃん|ばあちゃん/.test(w)) return "ancestor";
@@ -1065,14 +1101,14 @@
       if (/推し|アイドル|配信者/.test(w)) return "oshi";
       if (/友|親友|仲間|同僚/.test(w)) return "friend";
       if (/パートナー|彼|彼女|恋人|旦那|夫|妻|嫁/.test(w)) return "partner";
-      if (/忖度くん|ほんここ|宇宙|^$/.test(w)) return "honkoko";
+      if (/宇宙/.test(w)) return "honkoko";
       return "custom";
     }
 
     function speakAs(who, text, tone) {
       const core = String(text).trim();
       const kind = classifyWho(who);
-      const name = String(who || "忖度くん").trim() || "忖度くん";
+      const name = String(who || PRODUCT_NAME).trim() || PRODUCT_NAME;
       const voices = {
         mother: { open: "愛しいあなたへ。母の光から。", close: "いつでも、あなたの守護でいるからね。" },
         father: { open: "大地のように、父の光から。", close: "あなたの魂は、もう守られている。" },
@@ -1195,7 +1231,7 @@
           chipWrap.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.textContent === input.value));
         });
         const go = () => {
-          const v = (input.value || "").trim() || "忖度くん";
+          const v = (input.value || "").trim() || PRODUCT_NAME;
           advanceFromQuestion(q, v);
         };
         document.getElementById("whoGo").onclick = go;
@@ -1225,7 +1261,7 @@
       card.setAttribute("aria-busy", "false");
       card.innerHTML =
         '<div class="result">' +
-          '<div class="tag">忖度くん · ' + escapeHtml(line.vibe || "光") + "</div>" +
+          '<div class="tag">' + escapeHtml(PRODUCT_NAME) + " · " + escapeHtml(line.vibe || "光") + "</div>" +
           '<p class="from-who">' + escapeHtml(who) + "より</p>" +
           '<p class="quote">' + escapeHtml(spoken) + "</p>" +
           '<p class="meta">あなたの直感が選んだ波動で、言葉が降りてきました。<br />残したい光は、そっと画面に留めて。</p>' +
@@ -1247,7 +1283,7 @@
       updateDots();
       const excludeText = opts && opts.excludeText;
       const line = pickLine(excludeText);
-      const who = state.answers.who || "忖度くん";
+      const who = state.answers.who || PRODUCT_NAME;
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const wait = reduce ? 0 : (opts && opts.quick ? 700 : 1200);
       const veil = veilLines[Math.floor(Math.random() * veilLines.length)];
@@ -1260,6 +1296,7 @@
       revealTimer = setTimeout(() => showQuote(line, who), wait);
     }
 
+    applyBrand();
     renderQuestion();
   </script>
 </body>
