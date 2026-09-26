@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f3eadc" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="ブッダのお言葉。ほんここチャンネル。三つの問いに答え、短い静けさのあと、仏教の考えをかりたオリジナルの言葉が届きます。" />
+  <meta property="og:title" content="ブッダのお言葉 — ほんここチャンネル" />
+  <meta property="og:description" content="三つの問いに指で答え、短い静けさのあと、いまのあなたへ言葉が届きます。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="ほんここチャンネル" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ブッダのお言葉 — ほんここチャンネル" />
+  <meta name="twitter:description" content="三つの問いに指で答え、短い静けさのあと、いまのあなたへ言葉が届きます。" />
+  <meta name="apple-mobile-web-app-title" content="ブッダのお言葉" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c56a1a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='28' fill='white'%3E仏%3C/text%3E%3C/svg%3E" />
+  <title>ブッダのお言葉 — ほんここチャンネル</title>
+  <link rel="stylesheet" href="okotoba.css" />
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <svg class="lotus" viewBox="0 0 88 72" aria-hidden="true">
+        <ellipse cx="44" cy="40" rx="9" ry="22" fill="#e7b56a" />
+        <ellipse cx="31" cy="44" rx="8" ry="18" transform="rotate(-26 31 44)" fill="#d4924a" />
+        <ellipse cx="57" cy="44" rx="8" ry="18" transform="rotate(26 57 44)" fill="#d4924a" />
+        <ellipse cx="19" cy="50" rx="7" ry="14" transform="rotate(-50 19 50)" fill="#c4783a" />
+        <ellipse cx="69" cy="50" rx="7" ry="14" transform="rotate(50 69 50)" fill="#c4783a" />
+        <path d="M12 58c12 7 22 9 32 9s20-2 32-9" fill="none" stroke="#8d6a45" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <div class="brand">ほんここチャンネル</div>
+      <h1>ブッダのお言葉</h1>
+      <p class="sub">三つの問いに指で答えると、<br />短い静けさのあと、言葉が届きます。</p>
+    </header>
+
+    <div class="progress" id="progress" hidden aria-hidden="true">
+      <div class="dot on"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <main class="card" id="card" aria-live="polite">
+      <noscript>
+        <p class="q-title">言葉を受け取るには、JavaScriptを有効にしてください。</p>
+      </noscript>
+    </main>
+
+    <p class="foot">ブッダのお言葉 · ほんここチャンネル<br />オリジナルの言葉。未来の保証でも、医療の助言でもありません。<br /><a href="../">天の声へ</a></p>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
