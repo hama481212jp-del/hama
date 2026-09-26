@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#FDFBF7" />
-  <meta name="description" content="ほんここチャンネルのひとこと導き。直感で選ぶだけで、いまのあなたへ言葉をお届けします。" />
-  <meta property="og:title" content="ほんここ — いまのあなたへ" />
-  <meta property="og:description" content="直感で選ぶだけ。宇宙からのひとことをお届けします。" />
+  <meta name="description" content="忖度くんのひとこと導き。直感で選ぶだけで、いまのあなたへ言葉をお届けします。" />
+  <meta property="og:title" content="忖度くん — いまのあなたへ" />
+  <meta property="og:description" content="忖度くん。直感で選ぶだけ。宇宙からのひとことをお届けします。" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c4785a'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='28' fill='white'%3Eほ%3C/text%3E%3C/svg%3E" />
-  <title>ほんここ — いまのあなたへ</title>
+  <meta name="twitter:title" content="忖度くん — いまのあなたへ" />
+  <meta name="twitter:description" content="忖度くん。直感で選ぶだけ。宇宙からのひとことをお届けします。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c4785a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='26' fill='white'%3E忖%3C/text%3E%3C/svg%3E" />
+  <title>忖度くん — いまのあなたへ</title>
   <style>
     :root {
       --bg: #FDFBF7;
@@ -67,8 +69,8 @@
     }
     .brand {
       display: inline-block;
-      font-size: 11px;
-      letter-spacing: 0.28em;
+      font-size: 12px;
+      letter-spacing: 0.16em;
       color: var(--accent);
       font-weight: 700;
       padding: 6px 12px;
@@ -267,9 +269,9 @@
 <body>
   <div class="shell">
     <header>
-      <div class="brand">HONKOKO</div>
-      <h1>いまのあなたへ<br />ひとことお届け</h1>
-      <p class="sub">タッチで選んで、その人の言葉で届く。<br />ほんここチャンネルの試作です。</p>
+      <div class="brand">忖度くん</div>
+      <h1>忖度くん<br />いまのあなたへ、ひとこと</h1>
+      <p class="sub">タッチで選んで、その人の言葉で届く。<br />直感のまま、言葉をお届けします。</p>
     </header>
 
     <div class="progress" id="progress" aria-hidden="true">
@@ -282,7 +284,7 @@
 
     <main class="card" id="card"></main>
 
-    <p class="foot">試作 v0.8 · 言葉はほんここオリジナル（著作権に配慮）</p>
+    <p class="foot">試作 v0.8 · ほんここチャンネル · 言葉はオリジナル（著作権に配慮）</p>
   </div>
 
   <script>
@@ -484,8 +486,8 @@
     ];
 
     const fallback = [
-      { text: "いまのあなたに合う言葉は、きっと近くにあります。ひと呼吸おいてから、もう一度選んでみて。", vibe: "ほんここ" },
-      { text: "選んだ気持ちそのものが、もう答えの入口です。急がなくて大丈夫。", vibe: "ほんここ" }
+      { text: "いまのあなたに合う言葉は、きっと近くにあります。ひと呼吸おいてから、もう一度選んでみて。", vibe: "ひとこと" },
+      { text: "選んだ気持ちそのものが、もう答えの入口です。急がなくて大丈夫。", vibe: "ひとこと" }
     ];
 
     const whoChips = ["お母さん", "お父さん", "未来の自分", "推し", "先生", "親友", "パートナー"];
@@ -503,7 +505,7 @@
       if (/未来|あとの自分|一年後|十年後/.test(w)) return "futureSelf";
       if (/友|親友|仲間|同僚/.test(w)) return "friend";
       if (/パートナー|彼|彼女|恋人|旦那|夫|妻|嫁/.test(w)) return "partner";
-      if (/ほんここ|^$/.test(w)) return "honkoko";
+      if (/忖度くん|ほんここ|^$/.test(w)) return "honkoko";
       return "custom";
     }
 
@@ -519,7 +521,7 @@
     function speakAs(who, text) {
       const core = softCore(text);
       const kind = classifyWho(who);
-      const name = String(who || "ほんここ").trim() || "ほんここ";
+      const name = String(who || "忖度くん").trim() || "忖度くん";
       switch (kind) {
         case "mother":
           return `大丈夫よ。${core}\nお母さんは、ずっとあなたの味方だからね。`;
@@ -621,7 +623,7 @@
           chipWrap.appendChild(b);
         });
         const go = () => {
-          const v = (input.value || "").trim() || "ほんここ";
+          const v = (input.value || "").trim() || "忖度くん";
           advanceFromQuestion(q, v);
         };
         document.getElementById("whoGo").onclick = go;
@@ -656,11 +658,11 @@
     function renderResult() {
       updateDots();
       const line = pickLine();
-      const who = state.answers.who || "ほんここ";
+      const who = state.answers.who || "忖度くん";
       const spoken = speakAs(who, line.text);
       card.innerHTML = `
         <div class="result">
-          <div class="tag">ほんここオリジナル · ${escapeHtml(line.vibe || "ひとこと")}</div>
+          <div class="tag">忖度くん · ${escapeHtml(line.vibe || "ひとこと")}</div>
           <p class="from-who">${escapeHtml(who)} の言葉で</p>
           <p class="quote">${escapeHtml(spoken)}</p>
           <p class="meta">選んだ組み合わせと、その人の言いそうな口調でお届けしました。<br />気に入ったら、スクショで保存してみてね。</p>
