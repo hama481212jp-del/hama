@@ -3,32 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#FDFBF7" />
-  <meta name="description" content="忖度くんのひとこと導き。直感で選ぶだけで、いまのあなたへ言葉をお届けします。" />
-  <meta property="og:title" content="忖度くん — いまのあなたへ" />
-  <meta property="og:description" content="忖度くん。直感で選ぶだけ。宇宙からのひとことをお届けします。" />
+  <meta name="theme-color" content="#3f3560" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="忖度くん。直感で扉をひらくと、宇宙の静けさから、いまの魂へやさしい光の言葉が届きます。" />
+  <meta property="og:title" content="忖度くん — 魂に届く光のことば" />
+  <meta property="og:description" content="忖度くん。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="ほんここチャンネル" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="忖度くん — いまのあなたへ" />
-  <meta name="twitter:description" content="忖度くん。直感で選ぶだけ。宇宙からのひとことをお届けします。" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c4785a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='26' fill='white'%3E忖%3C/text%3E%3C/svg%3E" />
-  <title>忖度くん — いまのあなたへ</title>
+  <meta name="twitter:title" content="忖度くん — 魂に届く光のことば" />
+  <meta name="twitter:description" content="忖度くん。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
+  <meta name="apple-mobile-web-app-title" content="忖度くん" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233f3560'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23d4b36a' stroke-width='1.5'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='26' fill='%23f6e7c1' font-family='serif'%3E%E6%80%AE%3C/text%3E%3C/svg%3E" />
+  <title>忖度くん — 魂に届く光のことば</title>
   <style>
     :root {
-      --bg: #FDFBF7;
-      --ink: #2f2924;
-      --muted: #8a7b6e;
-      --accent: #b86b52;
-      --accent2: #7a8f7e;
-      --card: rgba(255, 252, 248, 0.94);
-      --line: rgba(184, 107, 82, 0.18);
-      --shadow: 0 16px 36px rgba(62, 48, 36, 0.12);
+      --bg: #f4efe8;
+      --ink: #2a2438;
+      --muted: #5c5470;
+      --accent: #8d6a32;
+      --accent2: #5c4d86;
+      --gold: #b0893f;
+      --card: rgba(255, 252, 248, 0.9);
+      --line: rgba(92, 77, 134, 0.2);
+      --shadow: 0 16px 40px rgba(48, 36, 72, 0.12);
       --radius: 22px;
       --font: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
-    html { background: var(--bg); }
+    html {
+      background: var(--bg);
+      -webkit-text-size-adjust: 100%;
+    }
     body {
       margin: 0;
       font-family: var(--font);
@@ -37,7 +45,6 @@
       min-height: 100%;
       min-height: 100dvh;
     }
-    /* Fixed layer so the watercolor stays full-bleed while the card scrolls. */
     body::before {
       content: "";
       position: fixed;
@@ -50,12 +57,29 @@
       background-position: center;
       background-size: cover;
     }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(1.2px 1.2px at 8% 11%, rgba(255, 248, 220, 0.95) 50%, transparent 52%),
+        radial-gradient(1.5px 1.5px at 18% 24%, rgba(232, 210, 150, 0.85) 50%, transparent 52%),
+        radial-gradient(1px 1px at 40% 7%, rgba(255, 255, 255, 0.9) 50%, transparent 52%),
+        radial-gradient(1px 1px at 63% 16%, rgba(255, 255, 255, 0.75) 50%, transparent 52%),
+        radial-gradient(1.6px 1.6px at 84% 12%, rgba(212, 186, 120, 0.9) 50%, transparent 52%),
+        radial-gradient(1.2px 1.2px at 92% 34%, rgba(230, 220, 255, 0.75) 50%, transparent 52%),
+        radial-gradient(1px 1px at 12% 68%, rgba(255, 250, 230, 0.7) 50%, transparent 52%),
+        radial-gradient(1.4px 1.4px at 78% 74%, rgba(212, 186, 120, 0.55) 50%, transparent 52%),
+        radial-gradient(1px 1px at 70% 8%, rgba(255, 255, 255, 0.8) 50%, transparent 52%);
+    }
     .shell {
       max-width: 430px;
       margin: 0 auto;
       min-height: 100%;
       min-height: 100dvh;
-      padding: 28px 18px 44px;
+      padding: max(28px, env(safe-area-inset-top)) 18px max(36px, env(safe-area-inset-bottom));
       display: flex;
       flex-direction: column;
       position: relative;
@@ -63,56 +87,85 @@
     }
     header {
       text-align: center;
-      padding: 4px 8px 14px;
+      padding: 2px 8px 12px;
       position: relative;
       z-index: 1;
     }
+    header::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -8px;
+      width: 240px;
+      height: 140px;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse, rgba(196, 176, 230, 0.38), rgba(212, 179, 106, 0.12) 42%, transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .sigil {
+      font-size: 13px;
+      letter-spacing: 0.42em;
+      color: var(--gold);
+      text-shadow: 0 0 12px rgba(212, 179, 106, 0.65);
+      margin: 0 0 8px;
+    }
     .brand {
       display: inline-block;
-      font-size: 12px;
-      letter-spacing: 0.16em;
-      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--accent2);
       font-weight: 700;
       padding: 6px 12px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(176, 137, 63, 0.35);
       border-radius: 999px;
-      background: rgba(255,255,255,0.55);
+      background: rgba(255, 252, 248, 0.62);
     }
     h1 {
-      margin: 14px 0 0;
-      font-size: 1.42rem;
+      margin: 12px 0 0;
+      font-size: 1.72rem;
       font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
+      line-height: 1.35;
+      letter-spacing: 0.16em;
+      text-wrap: balance;
+    }
+    .lead {
+      margin: 8px 0 0;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--accent2);
+      font-weight: 700;
+      text-wrap: balance;
     }
     .sub {
       margin: 10px 0 0;
       font-size: 0.88rem;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .progress {
       display: flex;
       gap: 7px;
       justify-content: center;
-      margin: 4px 0 16px;
+      margin: 2px 0 16px;
     }
     .dot {
       width: 26px;
       height: 5px;
       border-radius: 99px;
-      background: rgba(47,41,36,0.1);
-      transition: background 0.25s ease, width 0.25s ease;
+      background: rgba(92, 77, 134, 0.16);
+      transition: background 0.25s ease, width 0.25s ease, box-shadow 0.25s ease;
     }
     .dot.on {
-      background: var(--accent);
+      background: linear-gradient(90deg, #d4b36a, #8d6bb5);
       width: 34px;
+      box-shadow: 0 0 8px rgba(212, 179, 106, 0.75);
     }
     .card {
       background: var(--card);
-      border: 1px solid var(--line);
+      border: 1px solid rgba(176, 137, 63, 0.28);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, 0.4) inset, 0 0 32px rgba(168, 140, 212, 0.16);
       padding: 24px 18px 18px;
       flex: 1;
       backdrop-filter: blur(8px);
@@ -126,16 +179,18 @@
       font-weight: 700;
     }
     .q-title {
-      font-size: 1.18rem;
+      font-size: 1.16rem;
       font-weight: 700;
       margin: 0 0 18px;
-      line-height: 1.55;
+      line-height: 1.6;
+      text-wrap: balance;
     }
     .choices { display: grid; gap: 10px; }
+    button { touch-action: manipulation; }
     button.choice {
       appearance: none;
       border: 1.5px solid var(--line);
-      background: #fff;
+      background: rgba(255, 255, 255, 0.86);
       color: var(--ink);
       border-radius: 16px;
       padding: 15px 16px;
@@ -144,14 +199,18 @@
       text-align: left;
       cursor: pointer;
       transition: border-color 0.15s, background 0.15s, transform 0.08s, box-shadow 0.15s;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
     }
     button.choice:active { transform: scale(0.985); }
     button.choice:hover, button.choice:focus-visible {
-      border-color: var(--accent);
-      background: #f8ebe4;
+      border-color: var(--gold);
+      background: rgba(248, 243, 255, 0.96);
       outline: none;
-      box-shadow: 0 6px 16px rgba(184, 107, 82, 0.12);
+      box-shadow: 0 8px 20px rgba(92, 77, 134, 0.12);
+    }
+    button.choice:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
     }
     .chips {
       display: flex;
@@ -162,7 +221,7 @@
     .chip {
       appearance: none;
       border: 1px solid var(--line);
-      background: #fff;
+      background: rgba(255, 255, 255, 0.88);
       color: var(--muted);
       border-radius: 999px;
       padding: 8px 12px;
@@ -170,17 +229,19 @@
       font-size: 0.82rem;
       cursor: pointer;
     }
-    .chip:hover, .chip:focus-visible {
-      border-color: var(--accent);
-      color: var(--accent);
+    .chip:hover, .chip:focus-visible, .chip.on {
+      border-color: var(--gold);
+      color: var(--accent2);
+      background: rgba(247, 241, 255, 0.96);
       outline: none;
+      box-shadow: 0 0 0 1px rgba(176, 137, 63, 0.35);
     }
     .who-field { display: grid; gap: 12px; }
     .who-input {
       width: 100%;
       appearance: none;
       border: 1.5px solid var(--line);
-      background: #fff;
+      background: rgba(255, 255, 255, 0.92);
       color: var(--ink);
       border-radius: 16px;
       padding: 15px 16px;
@@ -189,25 +250,49 @@
     }
     .who-input:focus {
       outline: none;
-      border-color: var(--accent);
-      background: #fff8f4;
+      border-color: var(--gold);
+      background: #fffdfb;
+      box-shadow: 0 0 0 3px rgba(212, 179, 106, 0.2);
     }
     .who-hint {
       margin: 0;
       font-size: 0.82rem;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
-    .result { text-align: center; padding: 6px 2px 2px; }
+    .veil {
+      text-align: center;
+      padding: 28px 8px 18px;
+    }
+    .orb {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 32% 32%, #fff 0%, #f4e6bc 26%, #c9b6e8 62%, #5c4d86 100%);
+      box-shadow:
+        0 0 22px rgba(180, 160, 220, 0.75),
+        0 0 46px rgba(212, 184, 120, 0.4);
+      animation: breathe 1.8s ease-in-out infinite;
+    }
+    .veil-text {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: var(--accent2);
+      letter-spacing: 0.04em;
+    }
+    .result { text-align: center; padding: 2px 2px 2px; }
     .result .tag {
       display: inline-block;
       font-size: 11px;
       color: var(--accent2);
-      background: #e8f0ea;
+      background: rgba(232, 224, 248, 0.88);
       border-radius: 99px;
       padding: 5px 12px;
       margin-bottom: 14px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
       font-weight: 700;
     }
     .from-who {
@@ -215,24 +300,36 @@
       color: var(--accent);
       font-weight: 700;
       margin: 0 0 12px;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
     }
     .quote {
-      font-size: 1.12rem;
-      line-height: 1.9;
+      font-size: 1.08rem;
+      line-height: 1.95;
       font-weight: 600;
       margin: 0 0 16px;
       white-space: pre-wrap;
       text-align: left;
-      background: linear-gradient(180deg, #fff 0%, #fbf6f1 100%);
-      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 252, 248, 0.98) 0%, rgba(245, 240, 252, 0.94) 100%);
+      border: 1px solid rgba(176, 137, 63, 0.32);
       border-radius: 18px;
-      padding: 18px 16px;
+      padding: 18px 16px 16px;
+      box-shadow: inset 0 0 28px rgba(196, 180, 230, 0.28);
+      animation: rise 0.7s ease both;
+    }
+    .quote::before {
+      content: "✦";
+      display: block;
+      text-align: center;
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-shadow: 0 0 8px rgba(212, 179, 106, 0.65);
     }
     .meta {
       font-size: 0.84rem;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.7;
       margin: 0 0 20px;
     }
     .actions { display: grid; gap: 10px; }
@@ -246,32 +343,52 @@
       font-weight: 700;
       cursor: pointer;
     }
+    .btn:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
     .btn.primary {
-      background: linear-gradient(180deg, #c8836a 0%, var(--accent) 100%);
-      color: #fff;
-      box-shadow: 0 8px 18px rgba(184, 107, 82, 0.28);
+      background: linear-gradient(180deg, #6e5d96 0%, #453a6e 100%);
+      color: #fbf6ee;
+      box-shadow: 0 8px 18px rgba(63, 53, 96, 0.28), inset 0 0 0 1px rgba(212, 179, 106, 0.4);
     }
     .btn.ghost {
       background: transparent;
       color: var(--ink);
-      border: 1.5px solid var(--line);
+      border: 1.5px solid rgba(176, 137, 63, 0.35);
     }
     .foot {
       text-align: center;
-      margin-top: 18px;
+      margin-top: 16px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255, 252, 248, 0.72);
       font-size: 11px;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.7;
     }
     .hidden { display: none !important; }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); filter: saturate(1); }
+      50% { transform: scale(1.06); filter: saturate(1.08); }
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .orb, .quote, .dot { animation: none !important; transition: none !important; }
+    }
   </style>
 </head>
 <body>
   <div class="shell">
     <header>
-      <div class="brand">忖度くん</div>
-      <h1>忖度くん<br />いまのあなたへ、ひとこと</h1>
-      <p class="sub">タッチで選んで、その人の言葉で届く。<br />直感のまま、言葉をお届けします。</p>
+      <p class="sigil" aria-hidden="true">✦　☾　✦</p>
+      <div class="brand">ほんここチャンネル</div>
+      <h1>忖度くん</h1>
+      <p class="lead">魂に届く、光のことば</p>
+      <p class="sub">直感で扉をひらいて。<br />宇宙の静けさから、いまのあなたへ。</p>
     </header>
 
     <div class="progress" id="progress" aria-hidden="true">
@@ -282,215 +399,655 @@
       <div class="dot" data-i="4"></div>
     </div>
 
-    <main class="card" id="card"></main>
+    <main class="card" id="card" aria-live="polite">
+      <noscript><p class="q-title">光の言葉を受け取るには、JavaScriptを有効にしてください。</p></noscript>
+    </main>
 
-    <p class="foot">試作 v0.8 · ほんここチャンネル · 言葉はオリジナル（著作権に配慮）</p>
+    <p class="foot">ほんここチャンネル · オリジナルの光の言葉<br />医療の助言でも、確約された予言でもありません。</p>
   </div>
 
   <script>
     const questions = [
       {
         id: "theme",
-        label: "STEP 1 / 5",
-        title: "いまのテーマは？",
+        label: "光をひらく · 1 / 5",
+        title: "いま、どの領域に光を当てますか？",
         choices: [
-          { id: "love", label: "恋愛・パートナー" },
-          { id: "work", label: "仕事・お金まわり" },
-          { id: "people", label: "人間関係" },
-          { id: "self", label: "自分・心の整え" },
-          { id: "daily", label: "日常・暮らし" }
+          { id: "love", label: "愛と絆" },
+          { id: "work", label: "使命と豊かさ" },
+          { id: "people", label: "人と人の縁" },
+          { id: "self", label: "魂の在り方" },
+          { id: "daily", label: "日々という聖域" }
         ]
       },
       {
         id: "mood",
-        label: "STEP 2 / 5",
-        title: "いまの気分にいちばん近いのは？",
+        label: "波動を聴く · 2 / 5",
+        title: "いまの波動に、いちばん近いのは？",
         choices: [
-          { id: "tired", label: "ちょっと疲れている" },
-          { id: "anxious", label: "不安がちらつく" },
-          { id: "hopeful", label: "少し前向き" },
-          { id: "foggy", label: "ぼんやりしている" }
+          { id: "tired", label: "光が、少し薄い" },
+          { id: "anxious", label: "波が、ゆれている" },
+          { id: "hopeful", label: "光が、差しはじめている" },
+          { id: "foggy", label: "霧のなかにいる" }
         ]
       },
       {
         id: "need",
-        label: "STEP 3 / 5",
-        title: "いま、いちばんほしいものは？",
+        label: "魂の願い · 3 / 5",
+        title: "魂が、いま受け取りたいものは？",
         choices: [
-          { id: "ease", label: "安心・やすらぎ" },
-          { id: "courage", label: "勇気・一歩" },
-          { id: "kindness", label: "優しさ・許し" },
-          { id: "reset", label: "切り替え・リセット" }
+          { id: "ease", label: "やすらぎと守護" },
+          { id: "courage", label: "光への一歩" },
+          { id: "kindness", label: "許しと慈愛" },
+          { id: "reset", label: "波動の整え" }
         ]
       },
       {
         id: "tone",
-        label: "STEP 4 / 5",
-        title: "どんな響きがいい？",
+        label: "響きを選ぶ · 4 / 5",
+        title: "どんな響きで、言葉を受け取りますか？",
         choices: [
-          { id: "soft", label: "やさしく包む" },
-          { id: "clear", label: "きっぱり短い" },
-          { id: "warm", label: "あたたかく励ます" },
-          { id: "light", label: "くすっと軽い" }
+          { id: "soft", label: "光に包まれるように" },
+          { id: "clear", label: "澄んだサインとして" },
+          { id: "warm", label: "あたたかな導きで" },
+          { id: "light", label: "風のように軽やかに" }
         ]
       },
       {
         id: "who",
-        label: "STEP 5 / 5",
-        title: "最終、誰に言ってもらいたい？",
+        label: "声を迎える · 5 / 5",
+        title: "どの存在の声で、受け取りますか？",
         type: "text",
-        placeholder: "例）お母さん、未来の自分、推し、先生…",
-        button: "この人の言葉で聞く",
-        hint: "入力した人が言いそうな口調で届きます。下の候補をタップしてもOK。"
+        placeholder: "例）ハイヤーセルフ、ご先祖、お母さん…",
+        button: "この声で受け取る",
+        hint: "選んだ存在の波動で届きます。下の光をタップしても、そのまま書けます。"
       }
     ];
 
-    // Original lines only — no third-party copyrighted quotes
-    const lines = [
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["ease"], tones: ["soft"], text: "今日は、ちゃんと休むことも前進です。肩の力、ひとつだけ抜いてみよう。", vibe: "やすらぎ" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["ease"], tones: ["clear"], text: "休む。それが今日の仕事です。", vibe: "休息宣言" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["ease"], tones: ["warm"], text: "がんばった自分に、先にありがとうを。残りは、明日の自分が運んでくれます。", vibe: "ねぎらい" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["ease"], tones: ["light"], text: "バッテリー残量、見なくても低そう。充電タイム開始でーす。", vibe: "充電開始" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["courage"], tones: ["soft"], text: "疲れていても、ほんの小さな一歩なら届く。その一歩で十分、今日は前進。", vibe: "小さな一歩" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["courage"], tones: ["clear"], text: "大仕事は明日。今日は、できるひとつだけ。", vibe: "ひとつだけ" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["courage"], tones: ["warm"], text: "大きな一歩じゃなくていい。コップ一杯の水くらいの勇気で、十分いまは前進。", vibe: "小さな勇気" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["courage"], tones: ["light"], text: "勇者も、まずは靴下から。今日のクエストはそれくらいで合格。", vibe: "靴下クエスト" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["kindness"], tones: ["soft"], text: "自分にだけは、今日いちばんやさしい人でいてあげて。", vibe: "自己への優しさ" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["kindness"], tones: ["clear"], text: "自分を責めない。今日はそれだけで立派。", vibe: "責めない" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["kindness"], tones: ["warm"], text: "ここまで来た自分を、まずは抱きしめてあげよう。成果より、存在をほめて。", vibe: "存在をほめる" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["kindness"], tones: ["light"], text: "完璧じゃなくていい日を、公式に許可します。はんこ、ぽん。", vibe: "ゆるし" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["reset"], tones: ["soft"], text: "いったん、心のタブを閉じよう。開きすぎたままでは、だれでも重い。", vibe: "タブを閉じる" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["reset"], tones: ["clear"], text: "いったん止めていい。止まった場所から、また歩き出せる。", vibe: "リセット" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["reset"], tones: ["warm"], text: "今日の終わりは、新しい始まりの入口。深呼吸ひとつで、場面転換。", vibe: "場面転換" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["reset"], tones: ["light"], text: "脳内ラジオ、いったんミュート。CMの時間です。", vibe: "ミュート" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["ease"], tones: ["soft"], text: "不安は、未来の予報です。いまこの呼吸だけは、確実にあなたの味方。", vibe: "安心" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["ease"], tones: ["clear"], text: "全部やらなくていい。いま扱えるひとつだけ、手元に置こう。", vibe: "焦点" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["ease"], tones: ["warm"], text: "心配の波が来ても、岸にあなたはいる。波は通り過ぎるもの。", vibe: "岸にいる" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["ease"], tones: ["light"], text: "不安ちゃん、受付は明日の朝九時からでお願いします。", vibe: "受付時間" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["courage"], tones: ["soft"], text: "怖くてもいい。怖い気持ちの隣に、そっと座ってあげよう。", vibe: "寄り添い" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["courage"], tones: ["clear"], text: "わからないままでも、次の小さな選択はできる。それで十分。", vibe: "決断の種" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["courage"], tones: ["warm"], text: "震えながらでも進んだ人は、たくさんいる。あなたもその列に並んでいい。", vibe: "震えながらの一歩" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["courage"], tones: ["light"], text: "心臓ドッキンドッキンは、やる気のファンファーレかも。解釈、自由です。", vibe: "ファンファーレ" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["kindness"], tones: ["soft"], text: "心配しすぎた自分も、守りたかっただけ。まずは労ってから整えよう。", vibe: "理解" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["kindness"], tones: ["clear"], text: "不安な自分を、敵にしない。味方にすると楽になる。", vibe: "味方にする" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["kindness"], tones: ["warm"], text: "慎重なあなたは、大事なものを守れる人。その性質は宝物です。", vibe: "慎重は宝物" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["kindness"], tones: ["light"], text: "心配屋さん表彰状、今日もあなたに。でも副賞はホットミルクで。", vibe: "表彰状" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["reset"], tones: ["soft"], text: "頭のざわめきを、いったん床に置いてみよう。持ち運ぶのは、いまだけでいい。", vibe: "床に置く" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["reset"], tones: ["clear"], text: "想像の最悪は、いったん閉じて。現実の次の一歩だけ見る。", vibe: "最悪を閉じる" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["reset"], tones: ["warm"], text: "思考のループから降りて、温かい飲み物の側へ。体が先に落ち着くと、心も続く。", vibe: "体から整える" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["reset"], tones: ["light"], text: "脳内ニュース速報、一時休止。茶番はあとで見直せばいい。", vibe: "軽やか切り替え" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["ease"], tones: ["soft"], text: "うまくいきそうな日ほど、自分を急かさなくていい。流れに身を預けて。", vibe: "流れ" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["ease"], tones: ["clear"], text: "期待は持つ。執着は置いていく。そのバランスが、いちばん強い。", vibe: "バランス" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["ease"], tones: ["warm"], text: "いい予感があるなら、肩の力は抜いたまま受け取ろう。余裕が幸運を呼ぶ。", vibe: "余裕で受け取る" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["ease"], tones: ["light"], text: "今日の運気、いい感じ。焦って追い駆けると、走って逃げるかも。", vibe: "追いかけない" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["courage"], tones: ["soft"], text: "その予感、大事にして。小さな火種は、大事にするとちゃんと灯になる。", vibe: "予感を大事に" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["courage"], tones: ["clear"], text: "うまくいく確信がなくても、試す許可はもう出ている。", vibe: "試す許可" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["courage"], tones: ["warm"], text: "前に進みたい気持ちがいるなら、もうスタートは切れている。あとは速度の調整だけ。", vibe: "スタート済" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["courage"], tones: ["light"], text: "やる気ゲージ満タンっぽい。ボス戦のまえに、まずセーブしてね。", vibe: "セーブして進む" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["kindness"], tones: ["soft"], text: "うまくいきそうな自分にも、やさしくいて。張り切りすぎは、優しさの反対。", vibe: "張り切りすぎ注意" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["kindness"], tones: ["clear"], text: "好調な日ほど、自分と周囲にありがとうを。", vibe: "ありがとう" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["kindness"], tones: ["warm"], text: "前を向けるあなたは、すでに誰かの灯りになっているかもしれない。", vibe: "灯" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["kindness"], tones: ["light"], text: "いい調子の自分に、拍手。観客はいまのところ一人で十分。", vibe: "一人拍手" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["reset"], tones: ["soft"], text: "勢いがあるときほど、一度立ち止まれます。景色を見てから再出発。", vibe: "景色を見る" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["reset"], tones: ["clear"], text: "良い流れは、整えながら乗る。散らかしたままでは続かない。", vibe: "整えながら" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["reset"], tones: ["warm"], text: "前向きな今を、深呼吸で一度リセット。新鮮なまま、次へ運ぼう。", vibe: "新鮮なまま" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["reset"], tones: ["light"], text: "いい感じの波、来てる。乗りすぎず、ジャンプしすぎず、にこっと漕ごう。", vibe: "軽やか前進" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["ease"], tones: ["soft"], text: "はっきりしなくていい時間もあります。ぼんやりのまま、安心していよう。", vibe: "ぼんやり安心" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["ease"], tones: ["clear"], text: "決めなくていい。今日は、決める日じゃなくていい。", vibe: "決めなくていい" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["ease"], tones: ["warm"], text: "わからないままでも、あなたはここにいる。それだけで今日の合格点。", vibe: "存在の安心" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["ease"], tones: ["light"], text: "頭のなか、霧警報発令中。運転は控えめに、おやつは多めに。", vibe: "霧警報" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["courage"], tones: ["soft"], text: "見えなくても、足もとだけは確か。そこからでいい。", vibe: "足もと" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["courage"], tones: ["clear"], text: "全体像はあと。まずは目の前の五分だけ動く。", vibe: "五分だけ" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["courage"], tones: ["warm"], text: "はっきりしなくていい。ぼんやりしたままの優しさで、今日を通過しよう。", vibe: "ぼんやり優しさ" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["courage"], tones: ["light"], text: "方向がぼやけてても、靴は履ける。外の空気が、ヒントを運んでくる。", vibe: "外への一歩" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["kindness"], tones: ["soft"], text: "動けない日は、心が充電中のサイン。コンセントは抜かなくて大丈夫。", vibe: "充電" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["kindness"], tones: ["clear"], text: "ぼんやり自分を、雑に扱わない。丁寧に扱うほど、霧は薄くなる。", vibe: "丁寧に扱う" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["kindness"], tones: ["warm"], text: "ペースが遅い自分にも、席を用意してあげよう。ここにいていい。", vibe: "席がある" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["kindness"], tones: ["light"], text: "頭の中、読み込み中です…しばらくお待ちください。お茶どうぞ。", vibe: "読み込み中" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["reset"], tones: ["soft"], text: "ぼんやりも、心が整理している時間。霧が晴れる順番は、急がなくていい。", vibe: "霧の時間" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["reset"], tones: ["clear"], text: "答えを急がなくていい。まず窓を開けて、空気だけ入れ替えよう。", vibe: "換気" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["reset"], tones: ["warm"], text: "情報をいったん全部下ろして。空っぽのあとに、必要なものだけ戻そう。", vibe: "いったん空に" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["reset"], tones: ["light"], text: "頭のデスクトップ、整理タイム。アイコン多すぎ案件です。", vibe: "デスクトップ整理" },
-      { themes: ["self", "daily"], moods: ["tired", "foggy"], needs: ["ease", "kindness"], tones: ["soft", "warm"], text: "無理して輝かなくていい夜もある。淡い光のままで、十分美しい。", vibe: "淡い光" },
-      { themes: ["self", "daily"], moods: ["anxious", "tired"], needs: ["ease", "reset"], tones: ["soft", "clear"], text: "心が騒がしいときは、世界を小さくしていい。いまの部屋と、いまの呼吸だけで。", vibe: "世界を小さく" },
-      { themes: ["self", "daily"], moods: ["hopeful", "anxious"], needs: ["courage", "ease"], tones: ["warm", "soft"], text: "期待と不安が同居していても大丈夫。両方いるのは、本気のしるし。", vibe: "本気のしるし" },
-      { themes: ["self", "daily"], moods: ["tired", "hopeful"], needs: ["courage", "reset"], tones: ["warm", "light"], text: "疲れてても、ほんの少し楽しみがある。その芽を、水の代わりに笑顔で。", vibe: "楽しみの芽" },
-      { themes: ["self", "daily"], moods: ["foggy", "anxious"], needs: ["kindness", "ease"], tones: ["soft", "warm"], text: "はっきりしない不安も、名前をつけてあげると小さくなる。「わからない」でいい。", vibe: "名前をつける" },
-      { themes: ["self", "daily"], moods: ["hopeful", "foggy"], needs: ["reset", "courage"], tones: ["clear", "light"], text: "霧の向こうに、たぶん道はある。見えなくても、一歩分だけ確かめて進もう。", vibe: "一歩分の確かさ" },
-      { themes: ["self", "daily"], moods: ["tired"], needs: ["ease", "kindness"], tones: ["soft", "light"], text: "今日の自分に、満点じゃなくて「出席点」をあげよう。来ただけで偉い。", vibe: "出席点" },
-      { themes: ["self", "daily"], moods: ["anxious"], needs: ["courage", "kindness"], tones: ["warm", "clear"], text: "怖いのは、あなたが大切にしている証拠。大切だから、守ろうとする。", vibe: "大切の証拠" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["kindness", "ease"], tones: ["soft", "warm"], text: "うまくいきそうなときほど、足元の自分を甘やかして。燃料は優しさです。", vibe: "燃料は優しさ" },
-      { themes: ["self", "daily"], moods: ["foggy"], needs: ["reset", "ease"], tones: ["soft", "clear"], text: "考えすぎのスイッチ、オフ。感じるスイッチだけ、オンのままで。", vibe: "感じるオン" },
-      { themes: ["self", "daily"], moods: ["tired", "anxious"], needs: ["reset"], tones: ["clear", "light"], text: "今日のノルマ、半分でいい。いや、三分の一でも天才。", vibe: "ノルマ半減" },
-      { themes: ["self", "daily"], moods: ["hopeful"], needs: ["courage"], tones: ["soft", "warm", "clear"], text: "あなたの「やってみたい」は、すでに世界への招待状。返事は、小さな行動で。", vibe: "招待状" },
-      { themes: ["love"], moods: ["anxious"], needs: ["ease"], tones: ["soft"], text: "好きな気持ちが揺れるときほど、自分の呼吸を先に大切に。関係は、落ち着いた場所から育ちます。", vibe: "恋愛・安心" },
-      { themes: ["love"], moods: ["anxious"], needs: ["courage"], tones: ["warm"], text: "伝えてみたくなったその一言は、勇気の芽です。完璧な言い方じゃなくていい。", vibe: "恋愛・伝える" },
-      { themes: ["love"], moods: ["hopeful"], needs: ["courage"], tones: ["clear"], text: "好意は、小さくても本物。試しに一歩だけ、素直になってみよう。", vibe: "恋愛・一歩" },
-      { themes: ["love"], moods: ["tired"], needs: ["kindness"], tones: ["soft"], text: "好きな人の前でも、無理に元気じゃなくていい。素のあなたで、十分魅力がある。", vibe: "恋愛・素の自分" },
-      { themes: ["love"], moods: ["foggy"], needs: ["reset"], tones: ["clear"], text: "相手の気持ちを想像しすぎたら、いったん停止。わかる範囲だけ扱う。", vibe: "恋愛・想像停止" },
-      { themes: ["love"], moods: ["hopeful"], needs: ["ease"], tones: ["warm"], text: "うまくいきそうな恋ほど、焦らず味わって。急ぐほど、大事な景色を見落とす。", vibe: "恋愛・味わう" },
-      { themes: ["love"], moods: ["anxious"], needs: ["kindness"], tones: ["light"], text: "既読スルーの裁判、本日休廷。判決はあした以降で大丈夫。", vibe: "恋愛・休廷" },
-      { themes: ["love"], moods: ["tired"], needs: ["reset"], tones: ["soft"], text: "恋の悩みで疲れている日は、自分を恋人みたいに扱ってあげよう。", vibe: "恋愛・自分を大切に" },
-      { themes: ["love"], moods: ["foggy"], needs: ["ease"], tones: ["warm"], text: "好きか嫌いか、いまはっきりしなくていい。心が追いつく順番を、待ってあげて。", vibe: "恋愛・待つ" },
-      { themes: ["love"], moods: ["hopeful"], needs: ["kindness"], tones: ["soft"], text: "相手を大切にできる人は、自分のことも大切にしていい。両方あって、はじめて続く。", vibe: "恋愛・両立" },
-      { themes: ["love"], moods: ["anxious"], needs: ["reset"], tones: ["clear"], text: "不安な空想より、今日できた優しさを見る。事実のほうが、心に優しい。", vibe: "恋愛・事実を見る" },
-      { themes: ["love"], moods: ["tired"], needs: ["courage"], tones: ["light"], text: "告白レベルじゃなくていい。スタンプひとつ分の勇気から、物語は動く。", vibe: "恋愛・スタンプ一歩" },
-      { themes: ["work"], moods: ["tired"], needs: ["ease"], tones: ["soft"], text: "仕事の疲れは、あなたの価値を下げません。今日の貢献に、静かに点をあげよう。", vibe: "仕事・ねぎらい" },
-      { themes: ["work"], moods: ["anxious"], needs: ["courage"], tones: ["clear"], text: "全部やらなくていい。いまの一通、いまの一件だけを相手にする。", vibe: "仕事・一件だけ" },
-      { themes: ["work"], moods: ["hopeful"], needs: ["courage"], tones: ["warm"], text: "新しい挑戦の予感があるなら、小さく試していい。失敗は、調べもの扱い。", vibe: "仕事・小さく試す" },
-      { themes: ["work"], moods: ["foggy"], needs: ["reset"], tones: ["clear"], text: "優先順位が霧のときは、期限が近いものだけ残す。ほかはいったん待機。", vibe: "仕事・期限優先" },
-      { themes: ["work"], moods: ["tired"], needs: ["reset"], tones: ["light"], text: "残業脳、退勤スタンプ。今夜のタスクは、湯船か布団です。", vibe: "仕事・退勤" },
-      { themes: ["work"], moods: ["anxious"], needs: ["ease"], tones: ["soft"], text: "評価の心配が来たら、今日できた事実を三つ数える。不安より、事実が強い。", vibe: "仕事・事実三つ" },
-      { themes: ["work"], moods: ["hopeful"], needs: ["ease"], tones: ["warm"], text: "うまくいきそうな仕事ほど、呼吸を忘れずに。余裕が、いちばんのスキル。", vibe: "仕事・余裕" },
-      { themes: ["work"], moods: ["foggy"], needs: ["courage"], tones: ["warm"], text: "次のキャリアが見えなくても、今日の誠実さは積み上がっている。", vibe: "仕事・積み上げ" },
-      { themes: ["work"], moods: ["anxious"], needs: ["kindness"], tones: ["soft"], text: "できなかった自分を責める前に、条件の厳しさを認めてあげよう。", vibe: "仕事・条件を認める" },
-      { themes: ["work"], moods: ["tired"], needs: ["kindness"], tones: ["clear"], text: "休むことも、仕事の一部。壊れない設計が、いちばんの成果。", vibe: "仕事・休む設計" },
-      { themes: ["work"], moods: ["hopeful"], needs: ["reset"], tones: ["clear"], text: "勢いがあるときほど、手順を整える。続く人は、散らかさない。", vibe: "仕事・整える" },
-      { themes: ["work"], moods: ["foggy"], needs: ["ease"], tones: ["light"], text: "頭の会議、長すぎ。いったんお茶ブレイクリクエスト。", vibe: "仕事・お茶" },
-      { themes: ["people"], moods: ["anxious"], needs: ["ease"], tones: ["soft"], text: "人の顔色が気になる日は、自分の顔色も見てあげて。あなたも守る対象です。", vibe: "人間関係・自分も守る" },
-      { themes: ["people"], moods: ["tired"], needs: ["kindness"], tones: ["warm"], text: "いい人でい続けて疲れたなら、境界線を一本だけ引いていい。", vibe: "人間関係・境界線" },
-      { themes: ["people"], moods: ["hopeful"], needs: ["courage"], tones: ["clear"], text: "伝えたい一言があるなら、短くていい。誠実さは、長さじゃ測れない。", vibe: "人間関係・短く伝える" },
-      { themes: ["people"], moods: ["foggy"], needs: ["reset"], tones: ["soft"], text: "関係の正解が見えないときは、距離を少し調整するだけでも前進。", vibe: "人間関係・距離調整" },
-      { themes: ["people"], moods: ["anxious"], needs: ["courage"], tones: ["warm"], text: "嫌われたくない気持ちは自然。それでも、自分を捨てない選択をしていい。", vibe: "人間関係・自分を捨てない" },
-      { themes: ["people"], moods: ["tired"], needs: ["ease"], tones: ["clear"], text: "今日は連絡を減らしていい。沈黙も、関係を守る方法のひとつ。", vibe: "人間関係・沈黙も守り" },
-      { themes: ["people"], moods: ["hopeful"], needs: ["kindness"], tones: ["soft"], text: "仲良くなれる予感があるなら、急がず誠実に。信頼は、ゆっくり煮込む料理。", vibe: "人間関係・信頼の煮込み" },
-      { themes: ["people"], moods: ["foggy"], needs: ["ease"], tones: ["light"], text: "空気読みすぎアラート。今日は字幕なしで、素でいきましょう。", vibe: "人間関係・素で" },
-      { themes: ["people"], moods: ["anxious"], needs: ["reset"], tones: ["clear"], text: "相手の頭の中は、開けない宝箱。推測ゲームは、ここで終了。", vibe: "人間関係・推測終了" },
-      { themes: ["people"], moods: ["tired"], needs: ["reset"], tones: ["warm"], text: "人付き合いの疲れは、心の筋肉痛。ストレッチは、ひとり時間。", vibe: "人間関係・ひとり時間" },
-      { themes: ["people"], moods: ["hopeful"], needs: ["ease"], tones: ["warm"], text: "良い関係は、頑張って取るものより、居やすい場所で育ちます。", vibe: "人間関係・居やすい場所" },
-      { themes: ["people"], moods: ["foggy"], needs: ["courage"], tones: ["soft"], text: "気まずい空気も、通過できる。あなたは、その場面の永久住民じゃない。", vibe: "人間関係・通過できる" },
-      { themes: ["self"], moods: ["tired"], needs: ["ease"], tones: ["soft"], text: "自分を整える時間は、ぜいたくじゃない。維持費です。払っていい。", vibe: "自分・維持費" },
-      { themes: ["self"], moods: ["anxious"], needs: ["kindness"], tones: ["warm"], text: "自己嫌悪が来たら、事実確認。あなたは、思っているほどひどくない。", vibe: "自分・事実確認" },
-      { themes: ["self"], moods: ["hopeful"], needs: ["courage"], tones: ["clear"], text: "変わりたい気持ちがあるなら、もう変化は始まっている。あとは習慣の設計。", vibe: "自分・習慣設計" },
-      { themes: ["self"], moods: ["foggy"], needs: ["reset"], tones: ["soft"], text: "自分探しは、急がなくていい。今日の好みをひとつ見つけるだけで前進。", vibe: "自分・好みひとつ" },
-      { themes: ["self"], moods: ["tired"], needs: ["kindness"], tones: ["light"], text: "自己啓発の宿題、今日は提出不要。休んだ自分に花丸。", vibe: "自分・花丸" },
-      { themes: ["self"], moods: ["anxious"], needs: ["ease"], tones: ["clear"], text: "他人のペース表は捨てていい。あなたの時計で生きる。", vibe: "自分・自分の時計" },
-      { themes: ["self"], moods: ["hopeful"], needs: ["ease"], tones: ["warm"], text: "成長の予感がある日は、自分を急かさず、観察してあげよう。", vibe: "自分・観察" },
-      { themes: ["self"], moods: ["foggy"], needs: ["courage"], tones: ["warm"], text: "何者かになる前に、いまの自分を否定しない。土台があるから、上に建つ。", vibe: "自分・土台" },
-      { themes: ["self"], moods: ["tired"], needs: ["reset"], tones: ["clear"], text: "比較ブラウザ、すべて閉じる。開くのは、自分のタブだけ。", vibe: "自分・比較を閉じる" },
-      { themes: ["self"], moods: ["anxious"], needs: ["courage"], tones: ["soft"], text: "自信がなくても、自分の味方宣言はできる。宣言から、感覚は後追いする。", vibe: "自分・味方宣言" },
-      { themes: ["self"], moods: ["hopeful"], needs: ["kindness"], tones: ["soft"], text: "前を向ける自分を、ちゃんとほめて。厳しさより、承認が伸びる肥料。", vibe: "自分・承認" },
-      { themes: ["self"], moods: ["foggy"], needs: ["ease"], tones: ["light"], text: "アイデンティティ更新中…しばらくぼんやりでOKです。", vibe: "自分・更新中" },
-      { themes: ["daily"], moods: ["tired"], needs: ["ease"], tones: ["soft"], text: "暮らしの幸せは、大きなイベントより、温かい一杯に宿ることが多い。", vibe: "日常・一杯" },
-      { themes: ["daily"], moods: ["anxious"], needs: ["reset"], tones: ["clear"], text: "部屋のすみをひとつ整える。心のすみも、ついてきれいになりやすい。", vibe: "日常・すみ一つ" },
-      { themes: ["daily"], moods: ["hopeful"], needs: ["courage"], tones: ["warm"], text: "小さな予定をひとつ入れよう。日常が、物語のページをめくる。", vibe: "日常・小さな予定" },
-      { themes: ["daily"], moods: ["foggy"], needs: ["ease"], tones: ["soft"], text: "何もしない午後も、暮らしの一部。空白があるから、色が映える。", vibe: "日常・空白" },
-      { themes: ["daily"], moods: ["tired"], needs: ["kindness"], tones: ["light"], text: "家事クエスト、今日はメインだけ。サイドディッシュは明日の自分へ。", vibe: "日常・家事メインだけ" },
-      { themes: ["daily"], moods: ["anxious"], needs: ["ease"], tones: ["warm"], text: "明日の心配より、今夜の枕の高さを整える。体が先、心はあとから。", vibe: "日常・枕から" },
-      { themes: ["daily"], moods: ["hopeful"], needs: ["ease"], tones: ["soft"], text: "いい朝の予感があるなら、急がず支度を。急ぐと、香りを取りこぼす。", vibe: "日常・香りを残す" },
-      { themes: ["daily"], moods: ["foggy"], needs: ["reset"], tones: ["clear"], text: "スマホを五分置く。窓の外の情報だけで、頭は十分更新される。", vibe: "日常・窓の外" },
-      { themes: ["daily"], moods: ["tired"], needs: ["reset"], tones: ["warm"], text: "一日の終わりに、できたことを三つだけ書く。暮らしは、それで十分美しい。", vibe: "日常・三つ書く" },
-      { themes: ["daily"], moods: ["anxious"], needs: ["courage"], tones: ["soft"], text: "小さな不安は、散歩一周で薄まることが多い。足が、心の換気扇。", vibe: "日常・散歩換気" },
-      { themes: ["daily"], moods: ["hopeful"], needs: ["kindness"], tones: ["clear"], text: "今日の自分に、ありがとうを一言。日常の感謝は、最強の習慣。", vibe: "日常・一言ありがとう" },
-      { themes: ["daily"], moods: ["foggy"], needs: ["courage"], tones: ["light"], text: "献立が決まらなくても、世界は終わらない。卵があれば、だいたい勝てる。", vibe: "日常・卵があれば" }
-    ];
+    const themeVibe = { love: "愛", work: "使命", people: "縁", self: "魂", daily: "暮らし" };
+    const needVibe = { ease: "守護", courage: "一歩", kindness: "慈愛", reset: "整え" };
+
+    function pack(soft, clear, warm, light) {
+      return { soft: soft, clear: clear, warm: warm, light: light };
+    }
+
+    // Original lines only — no third-party oracle text.
+    const oracle = {
+      love: {
+        tired: {
+          ease: pack(
+            "愛に疲れた夜は、魂が静かな毛布を求めている合図。守護は、がんばるあなたより、ほどけたあなたを抱きしめたがっています。",
+            "愛の光が薄いときは、休むことがいちばん深い祈りです。",
+            "愛しい人を想って疲れたあなたへ。今夜は宇宙が、あなたの代わりに見守っています。",
+            "恋の疲れは、月が雲に隠れて呼吸しているようなもの。羽根を畳んで、空へ預けて。"
+          ),
+          courage: pack(
+            "疲れている愛にも、小さな一歩は残されています。その一歩は、魂がまだ愛を信じている証。",
+            "大きな愛の決断は、光が戻ってから。今日は小さな真実だけで十分です。",
+            "疲れた胸の奥に、まだ温かい炎がある。その炎のまま、愛の方へ半歩でいい。",
+            "愛の勇気は、羽根のように軽くていい。今日は、心をひとつ浮かせるだけで道は開く。"
+          ),
+          kindness: pack(
+            "愛する人の前で消えそうなときは、まず自分の魂を慈しんで。あなたが光を失わないことが、愛の土台です。",
+            "愛に疲れた自分を、責めなくていい。慈愛はそこから始まります。",
+            "あなたは、もう十分に愛を注いできた。今度は、その慈愛を自分の胸へ還してあげて。",
+            "愛の重荷を、今夜は風に置いていい。羽根のような優しさで、自分を撫でるように。"
+          ),
+          reset: pack(
+            "愛の波動が重なったままなら、一度、宇宙の静けさに戻ろう。空白は、愛が新しく息をする場所です。",
+            "愛の回路を、いったん静けさで洗い流して。余白のあと、本当の絆が戻ります。",
+            "疲れた愛を、あたたかく整えていい。終わりではなく、魂が姿勢を直す時間です。",
+            "恋の埃は、風が払ってくれる。窓を開けて、軽い光を部屋に通して。"
+          )
+        },
+        anxious: {
+          ease: pack(
+            "愛が揺れるとき、宇宙はあなたを急かしていません。守護の光のなかで、呼吸だけを聖域にして。",
+            "不安な愛の正体は、未来の霧。いま守るのは、あなたの静かな波動だけ。",
+            "揺れる心を、あたたかく抱きしめて。愛は、安心の器にしか、やわらかく注がれません。",
+            "恋のざわめきは、潮が引くように過ぎていきます。心を、月の光くらい軽くして。"
+          ),
+          courage: pack(
+            "伝えたい言葉が胸で震えていても、大丈夫。その震えは、魂が真実へ触れようとする光です。",
+            "完璧な愛の言葉は要らない。真実の一言が、サインです。",
+            "こわいほど大切なんです。その大切さを抱いたまま、愛の方へ声を渡していい。",
+            "愛の勇気は、羽音のように小さくていい。ひとこと、風に乗せてみて。"
+          ),
+          kindness: pack(
+            "愛のなかで自分を疑う夜は、魂が許しを待っています。揺れた自分も、光の一部として抱きしめて。",
+            "不安になる愛は、弱さではない。慈愛で扱っていい性質です。",
+            "心配してしまうあなたを、どうか敵にしないで。その繊細さは、愛を守るための光。",
+            "愛の不安に、名前をつけて空へ放して。軽い慈愛が、胸に戻ってきます。"
+          ),
+          reset: pack(
+            "相手の心を想像する回路が回りすぎたら、宇宙の静けさで一度止めて。わかる光だけを、手元に残して。",
+            "愛の最悪の想像は、いま閉じる。残すのは、今日の事実というサインだけ。",
+            "思考の波から降りて、胸のあたたかさへ戻ろう。整った波動から、愛はまた澄みます。",
+            "恋の物語を、いったん風に預けて。続きは、軽い心が自然に拾います。"
+          )
+        },
+        hopeful: {
+          ease: pack(
+            "愛が光りはじめたときほど、魂は急がなくていい。流れに身をゆだねることが、受け取る祈りの形です。",
+            "良い愛の予感は、握らずに置く。余白が、祝福の波動を通します。",
+            "あたたかい予感があるなら、その光を味わって。焦りは、祝福の香りを消してしまいます。",
+            "恋の追い風が来ている。追わず、軽い帆のまま、宇宙に運ばれて。"
+          ),
+          courage: pack(
+            "愛へ進みたい直感は、高次からの招待状。小さな素直さが、扉の鍵になります。",
+            "愛の一歩は、もう許可されている。サインは、あなたの「やってみたい」。",
+            "前へ向かう胸のぬくもりを、信じていい。その温度が、愛の道を照らします。",
+            "恋の光は、跳ねなくていい。羽のように一歩、浮いて進んで。"
+          ),
+          kindness: pack(
+            "愛が順調なときほど、自分の光をいたわること。張りつめた魂には、慈愛が必要です。",
+            "愛が明るい日は、自分と相手へ、静かな感謝を。それが波動を保ちます。",
+            "あなたが誰かを照らせるのは、あなた自身が愛されているから。その循環を、胸で祝って。",
+            "良い愛の日は、軽いありがとうで十分。花びらのような感謝を、ひとつ。"
+          ),
+          reset: pack(
+            "愛の勢いがあるときこそ、一度、月の光のなかで立ち止まる。景色を見てから、また魂を進めて。",
+            "良い流れは、整えて乗る。愛の余白を残すことが、続く秘訣です。",
+            "あたたかい今を、深呼吸で一度清めて。新鮮な光のまま、次の絆へ。",
+            "恋の波に乗りすぎない。軽く漕いで、月の道を楽しんで。"
+          )
+        },
+        foggy: {
+          ease: pack(
+            "愛が霧のなかでも、あなたの魂はここにいます。はっきりしなくていい静けさを、守護が許しています。",
+            "愛の答えを、今日は決めなくていい。霧は、魂の休息です。",
+            "わからない愛のままで、あなたは愛されています。その事実が、いちばんあたたかいサイン。",
+            "恋の霧は、悪さをしていない。月が薄い夜のように、軽くそこにいて。"
+          ),
+          courage: pack(
+            "愛の全体像が見えなくても、足もとの光は確かです。その一歩分だけ、魂は進めます。",
+            "愛の霧のなかでは、五分の誠実さだけが道になります。",
+            "ぼんやりした愛でも、胸のぬくもりを手放さなくていい。小さな勇気は、もう光です。",
+            "方向が霞んでいても、心は羽を持てる。外の風が、次のサインを運ぶ。"
+          ),
+          kindness: pack(
+            "愛の気持ちが言葉にならない日は、魂がまだ夢を見ている途中。その不確かさを、慈愛で包んで。",
+            "好きかどうかを、急いで裁かない。霧の自分に、やさしい光を。",
+            "追いつかない心を、あたたかく待ってあげて。愛は、急かさない人のところに降りやすい。",
+            "恋の答えは、羽根の上で休んでいる。軽い優しさで、自分を待って。"
+          ),
+          reset: pack(
+            "愛の霧を払おうと力むほど、波動は濁ります。一度すべてを宇宙へ預け、空白の光を迎えて。",
+            "愛の情報を、いったん下ろす。必要なサインだけが、あとから戻ります。",
+            "頭のなかの恋を、あたたかい静けさへ置いて。整ったあと、心は自分で澄みます。",
+            "恋の霧は、風に任せて。窓を細く開けて、軽い光を通して。"
+          )
+        }
+      },
+      work: {
+        tired: {
+          ease: pack(
+            "使命に尽して光が薄くなったときは、魂が休息という聖域を求めています。今日の貢献は、もう宇宙に届いています。",
+            "疲れた仕事の日は、休むことが次の豊かさの土台です。",
+            "よくここまで光を注いできました。今夜は、あなたの代わりにあたたかい守護が番をします。",
+            "使命の疲れは、羽根を畳む時間。軽い光のまま、地に身を預けて。"
+          ),
+          courage: pack(
+            "疲れていても、魂の一歩は小さくていい。その小さな光が、使命の道を絶やしません。",
+            "大きな成果は明日の宇宙へ。今日は、ひとつの誠実さだけ。",
+            "疲れのなかの勇気は、すでに尊い。半歩のあたたかさで、今日は十分です。",
+            "使命の歩みを、羽のように軽く。今日は、光をひとつ運ぶだけでいい。"
+          ),
+          kindness: pack(
+            "できなさを責める前に、条件の重さを魂が知っています。慈愛で自分を扱った人から、流れは戻ります。",
+            "疲れた自分を裁かない。それが、仕事という光を守る作法です。",
+            "あなたは、思っているより丁寧に与えてきた。その慈愛を、自分にも還してあげて。",
+            "使命の完璧を、今夜は風に放して。軽い優しさが、明日の波動を澄ませます。"
+          ),
+          reset: pack(
+            "仕事の波動が絡まったままなら、一度、宇宙の静けさに回路を戻して。空白は、次の直感の入口です。",
+            "いったん止めていい。止まった場所から、使命はまた光ります。",
+            "一日の終わりは、失敗ではなく浄化。あたたかい呼吸で、役割をそっと脱いで。",
+            "頭のなかの会議を、風で閉じて。夜は、軽い光だけの時間です。"
+          )
+        },
+        anxious: {
+          ease: pack(
+            "評価の波が来ても、あなたの価値は宇宙側で揺らぎません。いま扱える一つの光だけを、手元に置いて。",
+            "不安は未来の霧。仕事で守るのは、いまの一件というサインだけ。",
+            "心配の岸に、あなたは立っています。あたたかい事実を三つ、胸に数えて。",
+            "仕事のざわめきは、雲が通る音。軽い呼吸で、空を空けてあげて。"
+          ),
+          courage: pack(
+            "見えない次の使命でも、魂は小さな選択ならできます。わからないままの一歩が、光の始まりです。",
+            "確信がなくても、試す許可はもう降りています。",
+            "震える挑戦のそばに、あたたかい光がいます。結果より、向かった在り方を祝って。",
+            "勇気は、羽音でいい。小さな実験を、風に乗せて。"
+          ),
+          kindness: pack(
+            "慎重な魂は、大事な光を守れる人。その性質を、慈愛で宝物にしてあげて。",
+            "不安な自分を、敵にしない。味方にした波動が、仕事を澄ませます。",
+            "できなかった日も、あなたの誠実さは消えていない。どうか、自分をあたたかく赦して。",
+            "心配を、悪い雲だと思わなくていい。軽い慈愛で、流してあげて。"
+          ),
+          reset: pack(
+            "最悪の想像が仕事を覆ったら、宇宙の静けさで一度閉じて。現実の次の光だけを見て。",
+            "思考のループから降りる。残すのは、次の一つの手順だけ。",
+            "頭を冷やすより、胸をあたためて。整った体から、使命の直感は戻ります。",
+            "仕事のざわめきを、いったん風で止めて。続きは、軽い心が選びます。"
+          )
+        },
+        hopeful: {
+          ease: pack(
+            "うまくいきそうな使命ほど、魂を急かさないで。余裕という光が、豊かさを通します。",
+            "期待は持つ。執着は置く。その澄んだバランスが、仕事の強さです。",
+            "いい予感の日は、肩の力を抜いたまま受け取って。あたたかい余裕が、祝福の器です。",
+            "追い風の仕事は、追わなくていい。軽い帆で、宇宙に運ばれて。"
+          ),
+          courage: pack(
+            "新しい挑戦の直感は、高次からの合図。小さく試すことが、光への返事です。",
+            "やってみたい、がもうサイン。使命は、その一言から動きはじめます。",
+            "前に進みたいぬくもりがあるなら、スタートは既に光の中。速度は、あとで整えればいい。",
+            "使命の光が点いている。跳ねずに、羽の一歩で十分です。"
+          ),
+          kindness: pack(
+            "好調なときほど、自分と周囲へ静かな感謝を。慈愛が、豊かさの波動を長く保ちます。",
+            "光っている日ほど、ありがとうを忘れない。それが使命の循環です。",
+            "あなたが輝けるのは、誰かのあたたかさも含まれているから。その縁を、胸で祝って。",
+            "良い流れに、軽い感謝を一枚。花びらのように置いて、先へ。"
+          ),
+          reset: pack(
+            "勢いがある使命ほど、一度手順を光で整えて。散らかさない魂が、道を長くします。",
+            "良い流れは、整えて乗る。余白のない成功は、続きません。",
+            "前向きな今を、深呼吸で清めて。新鮮なあたたかさのまま、次の仕事へ。",
+            "波に飲み込まれず、軽く整えて漕ぐ。月の道は、余白があるほど美しい。"
+          )
+        },
+        foggy: {
+          ease: pack(
+            "使命の全体が見えなくても、今日の誠実さは宇宙に積み上がっています。霧のまま、安心していよう。",
+            "進む先の答えを、今日は決めなくていい。霧は、魂が芽を抱く時間です。",
+            "わからない仕事の途中でも、あなたはここにいていい。その存在が、あたたかい土台です。",
+            "進路の霧を、悪いものにしない。月が薄い夜のように、軽く待って。"
+          ),
+          courage: pack(
+            "次の道が霞んでいても、今日の誠実な一歩は光です。全体像は、宇宙があとから見せます。",
+            "霧の仕事は、期限が近い一つの光だけを残す。ほかは待機でいい。",
+            "見えなくても、あなたの積み重ねは温かい。そのぬくもりを信じて、半歩だけ。",
+            "方向がぼやけていても、手は動かせる。軽い一歩が、風向きを教えます。"
+          ),
+          kindness: pack(
+            "何者で在るべきか分からない日は、魂が脱皮の途中。いまの自分を、慈愛で否定しないで。",
+            "ぼんやりした仕事の自分を、雑に扱わない。丁寧さが霧を薄くします。",
+            "遅いペースのあなたにも、席は用意されています。あたたかく、ここにいていい。",
+            "使命は、まだ霧の中で息をしている。軽い優しさで、その時間を許して。"
+          ),
+          reset: pack(
+            "優先が霧なら、一度すべてを宇宙へ下ろして。必要な光だけが、静けさのあと戻ります。",
+            "仕事の情報を空にする。残ったものだけが、今日のサインです。",
+            "頭の机を、あたたかい手で一度クリアして。整った余白に、直感は降りやすい。",
+            "使命の窓を細く開けて。風が、要らない思考を連れて出る。"
+          )
+        }
+      },
+      people: {
+        tired: {
+          ease: pack(
+            "人のあいだで光が薄くなった日は、あなたの魂も守る対象です。ひとりの静けさが、守護の形になります。",
+            "人に尽して疲れたなら、今日は沈黙も愛です。",
+            "よく場をあたためてきました。今夜は、あなたが誰かの光を背負わなくていい。",
+            "縁の疲れは、羽根を休める合図。軽い距離が、愛を長くします。"
+          ),
+          courage: pack(
+            "境界線を一本ひくことは、冷たい拒絶ではなく魂の祈りです。その小さな勇気を、光が応援しています。",
+            "伝えたい境界は、短くていい。誠実さは、長さでは測れません。",
+            "いい人を降りる半歩を、あたたかく許可します。あなたを捨てないことが、真の縁です。",
+            "断る勇気は、羽のように軽くていい。ひとこと、風に乗せて。"
+          ),
+          kindness: pack(
+            "気を使いすぎた自分を、まず慈しんで。あなたの光を削ってまで、場を守らなくていい。",
+            "疲れた優しさを、責えない。慈愛は、自分に還って初めて澄みます。",
+            "あなたはもう、十分にやわらかかった。その慈愛を、自分の胸へも注いであげて。",
+            "人への優しさを、今夜は少し自分へ。軽い慈愛が、波動を戻します。"
+          ),
+          reset: pack(
+            "人間関係の波動が重いときは、宇宙の静けさで距離を一度整えて。空白は、縁を壊すものではありません。",
+            "今日は連絡を減らしていい。沈黙は、関係を守る光にもなります。",
+            "人に疲れた日は、心が静けさを求めているサイン。あたたかいひとり時間が、浄化になります。",
+            "縁のざわめきを、風で少し遠ざけて。軽い静けさが、明日の愛を澄ませます。"
+          )
+        },
+        anxious: {
+          ease: pack(
+            "人の顔色が気になる日は、自分の波動の色も見てあげて。あなたも、守護される側の魂です。",
+            "相手の頭のなかは、開けない宇宙。安心は、自分の呼吸に還ることから。",
+            "嫌われたくない気持ちを、あたたかく認めて。それでも、あなたの光はここにいていい。",
+            "人の空気を読みすぎるときほど、月の高さまで心を浮かせて。少しの距離が、楽をもたらす。"
+          ),
+          courage: pack(
+            "伝える一言が震えていても、その震えは魂の誠実さです。短くていいから、光のまま渡して。",
+            "自分を捨てない選択が、今日の勇気です。",
+            "こわいほど大切なんです。そのぬくもりを抱いたまま、真実を渡していい。",
+            "縁の勇気は、羽音でいい。小さな本音を、風に乗せて。"
+          ),
+          kindness: pack(
+            "合わせすぎる自分も、場を愛したかっただけ。まずその魂を、慈愛で労ってから整えて。",
+            "人の目を気にする性質を、敵にしない。繊細さは、縁を結ぶ光です。",
+            "心配してしまうあなたを、どうか抱きしめて。そのあたたかさが、関係を守ってきました。",
+            "気疲れした心に、軽い許しを。あなたは、もう十分やさしかった。"
+          ),
+          reset: pack(
+            "推測の回路が回りすぎたら、宇宙の静けさで一度終えて。事実の光だけを、手元に残して。",
+            "相手の心の想像は、ここで閉じる。残すのは、今日できた優しさだけ。",
+            "思考の縁から降りて、胸のあたたかさへ。整ったあなたから、関係はまた澄みます。",
+            "人の物語を、いったん風に返して。続きは、軽い心が自然に知ります。"
+          )
+        },
+        hopeful: {
+          ease: pack(
+            "良い縁の予感は、急がず誠実に。信頼は、宇宙がゆっくり灯す光です。",
+            "居やすい関係が、本当の光。取りにいくより、在り方を整えて。",
+            "仲良くなれそうなぬくもりを、焦らず味わって。あたたかい余白が、信頼を育てます。",
+            "縁の追い風は、追わなくていい。軽い誠実さで、並んで歩いて。"
+          ),
+          courage: pack(
+            "近づきたい直感は、魂同士のサイン。小さな素直さが、扉を光で開きます。",
+            "伝えたい一言は、短くて神聖。長さより、波動の澄みです。",
+            "前へ伸びる気持ちを、あたたかく信じて。その温度が、縁の道を照らします。",
+            "人への一歩は、跳ねなくていい。羽のように、半歩だけ。"
+          ),
+          kindness: pack(
+            "誰かを照らしたい日ほど、自分の光も満たして。慈愛の循環が、縁を長くします。",
+            "良い関係の日は、感謝を静かに。それが波動の礼です。",
+            "あなたが場をあたたかくできるのは、あなたの魂が愛を知っているから。そのことを祝って。",
+            "人へのありがとうを、花びらひとつ分。軽い感謝が、縁を輝かせます。"
+          ),
+          reset: pack(
+            "良い縁ほど、一度立ち止まれる魂でいて。景色を見てから、また光を重ねて。",
+            "勢いのある関係も、余白で整える。詰めた愛は、続きにくい。",
+            "あたたかい今を、深呼吸で清めて。新鮮な光のまま、次の会話へ。",
+            "縁の波に乗りすぎない。軽く整えて、月のペースで。"
+          )
+        },
+        foggy: {
+          ease: pack(
+            "関係の正解が霧でも、あなたの魂は失敗していません。距離の静けさを、守護として許して。",
+            "人のあいだの答えを、今日は出さなくていい。霧は、魂の保留です。",
+            "わからない関係のままで、あなたは愛されています。そのあたたかさが、足もとです。",
+            "縁の霧を、悪く扱わない。月が薄い夜のように、軽く在って。"
+          ),
+          courage: pack(
+            "気まずい空気も、永久の場所ではありません。通過する勇気は、小さな光で足ります。",
+            "距離を少し調整するだけで、縁は前進します。",
+            "ぼんやりした関係でも、誠実さは温かい。半歩の調整を、自分に許して。",
+            "気まずい場は、風が通れば薄くなる。軽い一歩で、外の光へ。"
+          ),
+          kindness: pack(
+            "どう接するか言葉にならない日は、魂がまだ感じている途中。その不確かさを、慈愛で包んで。",
+            "関係の自分を、急いで裁かない。霧にも、やさしい光を。",
+            "追いつかない気持ちを、あたたかく待って。縁は、急かさない人のそばで澄みます。",
+            "人への答えは、羽根の上で休んでいる。軽い優しさで、自分を待って。"
+          ),
+          reset: pack(
+            "人間関係の情報を一度宇宙へ預けて。空白のあと、必要な縁だけが光で戻ります。",
+            "推測を空にする。残った感覚だけが、今日のサインです。",
+            "頭の関係図を、あたたかい手でいったん閉じて。整った胸が、次の距離を知ります。",
+            "縁の窓を細く開けて。要らない想像は、風が連れて出る。"
+          )
+        }
+      },
+      self: {
+        tired: {
+          ease: pack(
+            "自分を輝かせる力がない日は、魂が光の余白を求めています。休むことは、在り方の祈りです。",
+            "自分を整える時間は、ぜいたくではない。魂の維持です。",
+            "よく生きてきました。今夜は、あたたかい守護があなたの代わりに呼吸します。",
+            "魂の光が薄い夜は、羽根を畳んでいい。軽い休息が、宇宙との接続を戻します。"
+          ),
+          courage: pack(
+            "疲れた魂の一歩は、世界を変える大きさじゃなくていい。その小さな光が、在り方を守ります。",
+            "今日の自分に必要な勇気は、ひとつだけ。それ以上は、宇宙が預かります。",
+            "大きな変化の前に、あたたかい半歩を。あなたのペースが、正しい速度です。",
+            "自分を変える勇気は、羽のように軽くていい。今日は、光をひとつ選ぶだけ。"
+          ),
+          kindness: pack(
+            "自分にだけは、今日いちばん深い慈愛を。成果より、存在の光を先に祝福して。",
+            "自分を責めない。それが、疲れた日の神聖な決まりです。",
+            "ここまで来たあなたを、あたたかく抱きしめて。存在しているだけで、もう光です。",
+            "完璧の衣を、風に脱いで。軽い慈愛で、自分という魂を撫でて。"
+          ),
+          reset: pack(
+            "心の回路が開きすぎているなら、宇宙の静けさで一度閉じて。空白は、魂の浄化です。",
+            "比較を、すべて閉じる。開くのは、自分の光のページだけ。",
+            "一日の終わりを、あたたかく場面転換して。深呼吸が、新しい在り方の入口です。",
+            "思考の音を、風で静めて。軽い静けさが、魂を洗い流します。"
+          )
+        },
+        anxious: {
+          ease: pack(
+            "不安は、未来を守ろうとする魂の光。いまこの呼吸だけは、確実にあなたの味方です。",
+            "全部を整えなくていい。いまの一つの波動だけを、聖域に。",
+            "心配の波が来ても、岸にあたたかくあなたはいる。波は、通り過ぎる雲です。",
+            "不安の雲は、月を隠しきれない。軽い呼吸で、空を少し開けて。"
+          ),
+          courage: pack(
+            "怖くてもいい。怖い気持ちの隣に、そっと光の席を用意してあげて。そこから一歩は生まれます。",
+            "わからないままでも、次の小さな選択はできる。それが魂の勇気です。",
+            "震えながら進む人の列に、あなたもあたたかく並んでいい。その震えは、本気の光。",
+            "胸の高鳴りは、魂が光へ向かう前ぶれ。軽い呼吸のまま、一歩を浮かせて。"
+          ),
+          kindness: pack(
+            "心配しすぎた自分も、大切なものを守ろうとしただけ。まず慈愛で労って、それから整えて。",
+            "不安な自分を、敵にしない。味方にした瞬間、波動は柔らかくなる。",
+            "慎重なあなたは、大事な光を守れる人。その性質を、あたたかく宝物と呼んであげて。",
+            "自分への厳しさを、風で少し緩めて。軽い慈愛が、胸に戻ります。"
+          ),
+          reset: pack(
+            "頭のざわめきを、いったん宇宙の床に置いて。持ち運ぶのは、いまの呼吸だけでいい。",
+            "想像の最悪は、ここで閉じる。現実の次の光だけを見る。",
+            "思考の輪から降りて、あたたかい体へ。胸が先に落ち着くと、魂も続きます。",
+            "心のざわめきを、風でいったん静めて。続きは、軽い静けさが選びます。"
+          )
+        },
+        hopeful: {
+          ease: pack(
+            "光が差しはじめた日ほど、自分を急かさないで。流れに身を預けることが、受け取る在り方です。",
+            "良い予感は、握らずに置く。余白が、魂の祝福を通します。",
+            "いい流れを、あたたかい余裕で受け取って。肩の力が抜けた人に、祝福は降りやすい。",
+            "自分の追い風を、追わない。軽い帆のまま、宇宙に運ばれて。"
+          ),
+          courage: pack(
+            "やってみたい直感は、高次からの招待状。小さな行動が、光への返事になります。",
+            "変わりたい気持ちがあるなら、変化はもう始まっている。あとは在り方を整えるだけ。",
+            "前を向くぬくもりを、信じていい。その温度が、あなたの道をすでに照らしています。",
+            "魂のスタートは、跳ねなくていい。羽の一歩で、光は応答します。"
+          ),
+          kindness: pack(
+            "前を向ける自分にも、慈愛を。張りつめは、光の反対側にあります。",
+            "好調な日ほど、自分に静かな感謝を。承認が、魂を育てる光です。",
+            "あなたが誰かの灯りになれているかもしれない。そのことを、あたたかく自分に返して。",
+            "良い自分に、花びらの祝福を。軽い慈愛で、光は長持ちします。"
+          ),
+          reset: pack(
+            "勢いがあるときほど、月の光で一度立ち止まれる。景色を見てから、魂を再出発させて。",
+            "良い波動は、整えながら乗る。余白のない成長は、続きません。",
+            "前向きな今を、深呼吸であたたかく清めて。新鮮な光のまま、次の自分へ。",
+            "自分の波に乗りすぎない。軽く整えて、月の速度で進んで。"
+          )
+        },
+        foggy: {
+          ease: pack(
+            "自分が霧でも、魂はここに在ります。はっきりしなくていい時間を、宇宙は許しています。",
+            "自分の答えを、今日は決めなくていい。霧は、内側の神殿が静かな印。",
+            "わからないままでも、あなたは愛されています。そのあたたかさが、今日の光です。",
+            "自分という霧を、悪く扱わない。月が薄い夜のように、軽く在って。"
+          ),
+          courage: pack(
+            "何者か見えなくても、足もとの光は確かです。土台の自分を否定しない一歩でいい。",
+            "全体像はあと。まずは、いまの五分という小さな光。",
+            "ぼんやりした自分のまま、あたたかく進んでいい。優しさを連れた勇気は、強い。",
+            "方向が霞んでいても、魂は羽を持てる。外の風が、次のサインを運ぶ。"
+          ),
+          kindness: pack(
+            "動けない日は、魂が静かな充電をしている途中。そのペースを、慈愛で抜かないで。",
+            "ぼんやりした自分を、雑に扱わない。丁寧な光が、霧を薄くします。",
+            "遅い自分にも、あたたかい席を用意して。ここにいていい。それが在り方です。",
+            "自分探しを、羽根の上に置いて。軽い優しさで、霧が晴れるのを待って。"
+          ),
+          reset: pack(
+            "自分についての思考を一度すべて宇宙へ下ろして。空っぽの光のあと、必要なものだけが戻ります。",
+            "答えを急がない。まず内側の空気を、静かに入れ替える。",
+            "情報をあたたかく全部下ろして。余白の胸に、本当の好みが一つ戻ってくる。",
+            "心の窓を細く開けて。要らない自分像は、風が連れて出る。"
+          )
+        }
+      },
+      daily: {
+        tired: {
+          ease: pack(
+            "暮らしの光が薄い日は、大きな出来事より、温かい一杯が聖域になります。その小ささを、宇宙は祝福しています。",
+            "今日の暮らしに、休息の光を一つ。それが十分な祈りです。",
+            "よく一日を運んできました。今夜のあたたかさを、あなたが先に受け取って。",
+            "日常の疲れは、羽根を畳む夜。軽い光のまま、布団という月へ還って。"
+          ),
+          courage: pack(
+            "暮らしの一歩は、英雄の大きさじゃなくていい。コップ一杯の水が、魂の勇気になる日もあります。",
+            "今日の生活で動かす光は、一つだけ。それ以外は、宇宙が預かります。",
+            "疲れた日の小さな行動を、あたたかく祝福して。半歩は、もう暮らしの光です。",
+            "家の営みを、羽のように軽く。今日は、光を一つ運ぶだけでいい。"
+          ),
+          kindness: pack(
+            "暮らしを完璧に回せない自分へ、深い慈愛を。できたことより、在ったことを先に愛して。",
+            "自分への家事の審判を、今日は閉じる。慈愛が、部屋の光です。",
+            "側にいる人へだけでなく、あなた自身にあたたかい席を。暮らしは、そこから整います。",
+            "完璧な部屋を、風に任せて。軽い優しさで、今日の自分を通して。"
+          ),
+          reset: pack(
+            "一日の波動を、宇宙の静けさで一度閉じて。終わりの余白が、明日の光の入口です。",
+            "今夜の務めは、体を聖域に戻すこと。それ以外は、降ろしていい。",
+            "できたことを三つ、あたたかく数えて。暮らしは、その光で十分美しい。",
+            "今日の埃を、風で払って。軽い終わり方が、魂を洗います。"
+          )
+        },
+        anxious: {
+          ease: pack(
+            "明日の霧より、今夜の呼吸を。暮らしの安心は、世界をこの部屋のサイズまで小さくしていい、という許しです。",
+            "心配は、枕の外に置く。いまの部屋と、いまの光だけでいい。",
+            "不安な夜は、あたたかい飲み物が守護の形になる。体が先に、魂を迎えにいきます。",
+            "暮らしのざわめきを、月の高さまで上げて。心は、少し軽く下に残して。"
+          ),
+          courage: pack(
+            "小さな不安は、散歩という祈りの一周で薄まることが多い。足は、心の換気をする光です。",
+            "今日の暮らしの勇気は、一つの小さな選択。それだけで波動は動きます。",
+            "こわばった日常を、あたたかい半歩でほどいて。窓の外の光が、味方です。",
+            "不安は、羽でつついていい。軽い一歩が、部屋の空気を入れ替えます。"
+          ),
+          kindness: pack(
+            "暮らしのなかで自分を急かした夜は、魂が許しを待っています。丁寧に扱うほど、家の光は柔らかくなる。",
+            "心配しながら暮らす自分を、裁かない。繊細さは、日々を守る光です。",
+            "慎重なあなたの日常を、あたたかく労って。その気配りは、もう愛のかたち。",
+            "自分への小言を、風で一枚はがして。軽い慈愛を、部屋に残して。"
+          ),
+          reset: pack(
+            "頭の暮らし計画が騒がしいときは、宇宙の床に一度置いて。いま整えるのは、この部屋の四角だけでいい。",
+            "想像の明日は閉じる。現実のすみを、一つだけ光で拭く。",
+            "思考の家事を降りて、あたたかい体へ。整った呼吸が、部屋より先に澄みます。",
+            "心配のリストを、風に一枚渡して。残りは、軽い明日が知っています。"
+          )
+        },
+        hopeful: {
+          ease: pack(
+            "いい朝の予感があるなら、急がず支度を。香りを残す余白が、暮らしの祝福を通します。",
+            "良い日の予感は、握らない。ゆとりが、今日の豊かさです。",
+            "光が差しそうな一日を、あたたかい余裕で受け取って。焦りは、祝福の香りを消します。",
+            "暮らしの追い風は、追わなくていい。軽い支度で、宇宙についていって。"
+          ),
+          courage: pack(
+            "小さな予定を一つ入れることは、日常という宇宙への招待に返事をすること。その直感を、光にして。",
+            "今日の暮らしに、一つの新しい光を。ページは、それでめくれます。",
+            "やってみたい小さなことを、あたたかく予定に置いて。日常が、物語の祭壇になります。",
+            "日々の勇気は、羽の予定でいい。軽い一つが、風を変えます。"
+          ),
+          kindness: pack(
+            "調子のいい日ほど、自分に静かなありがとうを。暮らしの感謝は、波動を長く保つ祈りです。",
+            "今日の自分へ、感謝を一言。それが日々の光の習慣です。",
+            "あなたがこの部屋をあたたかくできることを、自分にも祝って返して。循環が、豊かさです。",
+            "暮らしへのありがとうを、花びら一つ。軽い感謝で、今日は十分輝く。"
+          ),
+          reset: pack(
+            "良い流れの日ほど、一度窓の光で立ち止まれる。景色を見てから、暮らしを続けて。",
+            "勢いのある日常も、すみを一つ整えて乗る。余白が、美しさを保ちます。",
+            "前向きな今日を、深呼吸であたたかく清めて。新鮮な光のまま、次の営みへ。",
+            "日々の波に飲み込まれず、軽く整えて。月の速度が、暮らしを長くする。"
+          )
+        },
+        foggy: {
+          ease: pack(
+            "何もしない午後も、暮らしの聖域です。空白があるから、魂の色が映えます。",
+            "ぼんやりした日は、決める日ではない。霧のまま、安心していよう。",
+            "わからない午後でも、あなたはここにいていい。そのあたたかさが、家の光です。",
+            "日々の霧を、悪くしない。月が薄い昼のように、軽く過ごして。"
+          ),
+          courage: pack(
+            "献立も予定も霞んでいても、足もとの一つは選べます。その小さな光で、暮らしは進みます。",
+            "全体が霧なら、五分だけ動く。窓の外が、次のサインを持っている。",
+            "ぼんやりした日常のまま、あたたかく一歩を。外の空気が、胸を迎えます。",
+            "方向が霞んでいても、足は羽になれる。軽い外歩きが、風向きを教えます。"
+          ),
+          kindness: pack(
+            "暮らしのペースが遅い日は、心が夢を見ている途中。その遅さを、慈愛で抜かないで。",
+            "ぼんやりした自分の部屋を、雑に急かさない。丁寧な光が、霧を薄くします。",
+            "遅い午後のあなたに、あたたかい席を。何もしない時間も、愛される資格がある。",
+            "日々の自分に、羽根の優しさを。軽い許可が、家の空気をやわらげる。"
+          ),
+          reset: pack(
+            "情報の多い暮らしを、一度宇宙へ下ろして。画面の外の光だけを、五分だけ迎え入れて。",
+            "頭の予定を空にする。窓の外の情報だけで、魂は更新される。",
+            "暮らしの思考を、あたたかく全部閉じて。余白のあと、必要な一つだけ戻して。",
+            "部屋の窓を細く開けて。要らない思考は、風が連れて出る。"
+          )
+        }
+      }
+    };
 
     const fallback = [
-      { text: "いまのあなたに合う言葉は、きっと近くにあります。ひと呼吸おいてから、もう一度選んでみて。", vibe: "ひとこと" },
-      { text: "選んだ気持ちそのものが、もう答えの入口です。急がなくて大丈夫。", vibe: "ひとこと" }
+      { text: "いまの波動に合う光は、すぐそばまで降りてきています。ひと呼吸のあと、もう一度扉をひらいて。", vibe: "静けさ" },
+      { text: "選んだ直感そのものが、すでにサインです。急がなくていい。魂の速度で受け取って。", vibe: "直感" }
     ];
 
-    const whoChips = ["お母さん", "お父さん", "未来の自分", "推し", "先生", "親友", "パートナー"];
+    const whoChips = ["ハイヤーセルフ", "未来の自分", "お母さん", "ご先祖さま", "守護存在", "推し", "先生"];
+
+    const veilLines = [
+      "宇宙の静けさに、耳を澄ませています…",
+      "光の層を、そっと開いています…",
+      "守護の波動が、言葉を紡いでいます…",
+      "高次のサインを、受け取っています…"
+    ];
+
+    function buildLines(tree) {
+      const themes = ["love", "work", "people", "self", "daily"];
+      const moods = ["tired", "anxious", "hopeful", "foggy"];
+      const needs = ["ease", "courage", "kindness", "reset"];
+      const tones = ["soft", "clear", "warm", "light"];
+      const out = [];
+      themes.forEach((theme) => {
+        moods.forEach((mood) => {
+          needs.forEach((need) => {
+            const block = (((tree[theme] || {})[mood] || {})[need]) || {};
+            tones.forEach((tone) => {
+              const text = block[tone];
+              if (!text) return;
+              out.push({
+                themes: [theme],
+                moods: [mood],
+                needs: [need],
+                tones: [tone],
+                text: text,
+                vibe: themeVibe[theme] + "の" + needVibe[need]
+              });
+            });
+          });
+        });
+      });
+      return out;
+    }
+
+    const lines = buildLines(oracle);
 
     function escapeHtml(s) {
       return String(s).replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
@@ -498,55 +1055,53 @@
 
     function classifyWho(who) {
       const w = String(who || "");
-      if (/母|ママ|おかあ|おかん|ばあ/.test(w)) return "mother";
-      if (/父|パパ|おとお|おやじ|じい/.test(w)) return "father";
+      if (/ハイヤー|高次/.test(w)) return "higherSelf";
+      if (/未来|あとの自分|一年後|十年後|来世/.test(w)) return "futureSelf";
+      if (/ご先祖|祖先|先祖|おじい|おばあ|じいちゃん|ばあちゃん/.test(w)) return "ancestor";
+      if (/守護|ガイド|天使|スピリット|精霊/.test(w)) return "guide";
+      if (/母|ママ|おかあ|おかん/.test(w)) return "mother";
+      if (/父|パパ|おとお|おやじ/.test(w)) return "father";
       if (/先生|師匠|メンター|上司/.test(w)) return "teacher";
       if (/推し|アイドル|配信者/.test(w)) return "oshi";
-      if (/未来|あとの自分|一年後|十年後/.test(w)) return "futureSelf";
       if (/友|親友|仲間|同僚/.test(w)) return "friend";
       if (/パートナー|彼|彼女|恋人|旦那|夫|妻|嫁/.test(w)) return "partner";
-      if (/忖度くん|ほんここ|^$/.test(w)) return "honkoko";
+      if (/忖度くん|ほんここ|宇宙|^$/.test(w)) return "honkoko";
       return "custom";
     }
 
-    function softCore(text) {
-      let t = String(text).trim();
-      t = t.replace(/ましょう[。．]?$/u, "ね。");
-      t = t.replace(/です[。．]?$/u, "だよ。");
-      t = t.replace(/しよう[。．]?$/u, "しようね。");
-      return t;
-    }
-
-    /** Rewrite the line so it sounds like something that person would say. */
-    function speakAs(who, text) {
-      const core = softCore(text);
+    function speakAs(who, text, tone) {
+      const core = String(text).trim();
       const kind = classifyWho(who);
       const name = String(who || "忖度くん").trim() || "忖度くん";
-      switch (kind) {
-        case "mother":
-          return `大丈夫よ。${core}\nお母さんは、ずっとあなたの味方だからね。`;
-        case "father":
-          return `${core}\n無理すんなよ。お前なら、ちゃんとやれる。`;
-        case "teacher":
-          return `${core}\n焦らなくていい。いまの一歩を、丁寧にいきましょう。`;
-        case "oshi":
-          return `ねえ、聞いて？\n${core}\nだいじょうぶ。推しは見てるよ。`;
-        case "futureSelf":
-          return `過去のわたしへ。\n${core}\nあのときの選択、ちゃんと届いてるよ。`;
-        case "friend":
-          return `ねえ。${core}\nひとりで抱えないで、いつでも呼んで。`;
-        case "partner":
-          return `${core}\nそばにいるよ。あなたのペースでいい。`;
-        case "honkoko":
-          return `${core}`;
-        default:
-          return `${name}として言うね。\n${core}\n—— ${name}より。`;
-      }
+      const voices = {
+        mother: { open: "愛しいあなたへ。母の光から。", close: "いつでも、あなたの守護でいるからね。" },
+        father: { open: "大地のように、父の光から。", close: "あなたの魂は、もう守られている。" },
+        teacher: { open: "導きの席から、静かに。", close: "いまの在り方を、信じて進みなさい。" },
+        oshi: { open: "光のほうから、あなたを見ているよ。", close: "その輝き、ちゃんと届いている。" },
+        futureSelf: { open: "未来のわたしから、いまのあなたへ。", close: "この瞬間は、光の時間軸に残っているよ。" },
+        friend: { open: "同じ星を見る友として。", close: "ひとりで魂を抱えなくていいよ。" },
+        partner: { open: "心を重ねる人として、そばから。", close: "あなたのペースのまま、愛は満ちていく。" },
+        ancestor: { open: "つながりのむこう、ご先祖の光より。", close: "あなたの足元は、もう祝福されている。" },
+        higherSelf: { open: "高次のあなたから、地上のあなたへ。", close: "思い出すだけでいい。あなたは、すでに知っている。" },
+        guide: { open: "守護の光が、静かに語りかける。", close: "あなたは、守られている。そのままで大丈夫。" },
+        honkoko: { open: "宇宙の静けさから。", close: "" },
+        custom: { open: name + "の波動を通して。", close: "—— " + name + "より、光を込めて。" }
+      };
+      const v = voices[kind] || voices.custom;
+      if (tone === "clear") return v.close ? core + "\n" + v.close : core;
+      if (tone === "light") return v.open + "\n" + core;
+      if (!v.close) return v.open + "\n" + core;
+      return v.open + "\n" + core + "\n" + v.close;
     }
 
     const state = { step: 0, answers: {} };
     const card = document.getElementById("card");
     const progress = document.getElementById("progress");
+    let revealTimer = 0;
+
+    function has(arr, v) {
+      return Array.isArray(arr) && arr.includes(v);
+    }
 
     function updateDots() {
       progress.querySelectorAll(".dot").forEach((d) => {
@@ -556,35 +1111,49 @@
       progress.classList.toggle("hidden", state.step >= questions.length);
     }
 
-    function pickLine() {
-      const { theme, mood, need, tone } = state.answers;
+    function scoreLine(L, answers) {
+      let score = 0;
+      if (has(L.themes, answers.theme)) score += 4;
+      if (has(L.moods, answers.mood)) score += 3;
+      if (has(L.needs, answers.need)) score += 3;
+      if (has(L.tones, answers.tone)) score += 2;
+      return score;
+    }
+
+    function pickLine(excludeText) {
+      const answers = state.answers;
       const scored = lines
-        .map((L) => {
-          let score = 0;
-          const themes = L.themes || ["self", "daily"];
-          if (themes.includes(theme)) score += 4;
-          if (L.moods.includes(mood)) score += 3;
-          if (L.needs.includes(need)) score += 3;
-          if (L.tones.includes(tone)) score += 2;
-          return { L, score };
-        })
+        .map((L) => ({ L: L, score: scoreLine(L, answers) }))
         .filter((x) => x.score >= 7)
         .sort((a, b) => b.score - a.score);
 
+      if (excludeText) {
+        const cell = lines.filter((L) =>
+          has(L.themes, answers.theme) &&
+          has(L.moods, answers.mood) &&
+          has(L.needs, answers.need) &&
+          L.text !== excludeText
+        );
+        const sameTone = cell.filter((L) => has(L.tones, answers.tone));
+        const pickFrom = sameTone.length ? sameTone : cell;
+        if (pickFrom.length) return pickFrom[Math.floor(Math.random() * pickFrom.length)];
+      }
+
       if (scored.length) {
         const best = scored[0].score;
-        const top = scored.filter((x) => x.score === best);
-        return top[Math.floor(Math.random() * top.length)].L;
+        const top = scored.filter((x) => x.score === best).map((x) => x.L);
+        const fresh = excludeText ? top.filter((L) => L.text !== excludeText) : top;
+        const pool = fresh.length ? fresh : top;
+        return pool[Math.floor(Math.random() * pool.length)];
       }
-      // Prefer theme match even if softer on other axes
-      const themed = lines.filter((L) => (L.themes || []).includes(theme));
+
+      const themed = lines.filter((L) => has(L.themes, answers.theme));
       const pool = themed.length ? themed : lines;
-      const loose = pool.filter(
-        (L) => L.moods.includes(mood) || L.needs.includes(need) || L.tones.includes(tone)
+      const loose = pool.filter((L) =>
+        has(L.moods, answers.mood) || has(L.needs, answers.need) || has(L.tones, answers.tone)
       );
-      if (loose.length) return loose[Math.floor(Math.random() * loose.length)];
-      if (themed.length) return themed[Math.floor(Math.random() * themed.length)];
-      return fallback[Math.floor(Math.random() * fallback.length)];
+      const pickFrom = loose.length ? loose : (themed.length ? themed : fallback);
+      return pickFrom[Math.floor(Math.random() * pickFrom.length)];
     }
 
     function advanceFromQuestion(q, value) {
@@ -595,20 +1164,19 @@
     }
 
     function renderQuestion() {
+      clearTimeout(revealTimer);
       updateDots();
       const q = questions[state.step];
       if (q.type === "text") {
-        card.innerHTML = `
-          <div class="q-label">${q.label}</div>
-          <h2 class="q-title">${q.title}</h2>
-          <div class="who-field">
-            <div class="chips" id="whoChips"></div>
-            <input class="who-input" id="whoInput" type="text" maxlength="40"
-              placeholder="${q.placeholder}" autocomplete="off" />
-            <p class="who-hint">${q.hint || ""}</p>
-            <button type="button" class="btn primary" id="whoGo">${q.button}</button>
-          </div>
-        `;
+        card.innerHTML =
+          '<div class="q-label">' + q.label + "</div>" +
+          '<h2 class="q-title">' + q.title + "</h2>" +
+          '<div class="who-field">' +
+            '<div class="chips" id="whoChips"></div>' +
+            '<input class="who-input" id="whoInput" type="text" maxlength="40" placeholder="' + q.placeholder + '" autocomplete="off" />' +
+            '<p class="who-hint">' + (q.hint || "") + "</p>" +
+            '<button type="button" class="btn primary" id="whoGo">' + q.button + "</button>" +
+          "</div>";
         const input = document.getElementById("whoInput");
         const chipWrap = document.getElementById("whoChips");
         whoChips.forEach((label) => {
@@ -618,9 +1186,13 @@
           b.textContent = label;
           b.onclick = () => {
             input.value = label;
+            chipWrap.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b));
             input.focus();
           };
           chipWrap.appendChild(b);
+        });
+        input.addEventListener("input", () => {
+          chipWrap.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.textContent === input.value));
         });
         const go = () => {
           const v = (input.value || "").trim() || "忖度くん";
@@ -636,50 +1208,56 @@
         setTimeout(() => input.focus(), 50);
         return;
       }
-      card.innerHTML = `
-        <div class="q-label">${q.label}</div>
-        <h2 class="q-title">${q.title}</h2>
-        <div class="choices">
-          ${q.choices
-            .map(
-              (c) =>
-                `<button type="button" class="choice" data-id="${c.id}">${c.label}</button>`
-            )
-            .join("")}
-        </div>
-      `;
+      card.innerHTML =
+        '<div class="q-label">' + q.label + "</div>" +
+        '<h2 class="q-title">' + q.title + "</h2>" +
+        '<div class="choices">' +
+          q.choices.map((c) => '<button type="button" class="choice" data-id="' + c.id + '">' + c.label + "</button>").join("") +
+        "</div>";
       card.querySelectorAll(".choice").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          advanceFromQuestion(q, btn.dataset.id);
-        });
+        btn.addEventListener("click", () => advanceFromQuestion(q, btn.dataset.id));
       });
     }
 
-    function renderResult() {
-      updateDots();
-      const line = pickLine();
-      const who = state.answers.who || "忖度くん";
-      const spoken = speakAs(who, line.text);
-      card.innerHTML = `
-        <div class="result">
-          <div class="tag">忖度くん · ${escapeHtml(line.vibe || "ひとこと")}</div>
-          <p class="from-who">${escapeHtml(who)} の言葉で</p>
-          <p class="quote">${escapeHtml(spoken)}</p>
-          <p class="meta">選んだ組み合わせと、その人の言いそうな口調でお届けしました。<br />気に入ったら、スクショで保存してみてね。</p>
-          <div class="actions">
-            <button type="button" class="btn primary" id="again">もう一度ひく</button>
-            <button type="button" class="btn ghost" id="same">同じ条件でもう一回</button>
-          </div>
-        </div>
-      `;
+    function showQuote(line, who) {
+      const tone = (line.tones && line.tones[0]) || state.answers.tone;
+      const spoken = speakAs(who, line.text, tone);
+      card.setAttribute("aria-busy", "false");
+      card.innerHTML =
+        '<div class="result">' +
+          '<div class="tag">忖度くん · ' + escapeHtml(line.vibe || "光") + "</div>" +
+          '<p class="from-who">' + escapeHtml(who) + "より</p>" +
+          '<p class="quote">' + escapeHtml(spoken) + "</p>" +
+          '<p class="meta">あなたの直感が選んだ波動で、言葉が降りてきました。<br />残したい光は、そっと画面に留めて。</p>' +
+          '<div class="actions">' +
+            '<button type="button" class="btn primary" id="again">もう一度、扉をひらく</button>' +
+            '<button type="button" class="btn ghost" id="same">同じ波動で、もうひとつの光</button>' +
+          "</div>" +
+        "</div>";
       document.getElementById("again").onclick = () => {
         state.step = 0;
         state.answers = {};
         renderQuestion();
       };
-      document.getElementById("same").onclick = () => {
-        renderResult();
-      };
+      document.getElementById("same").onclick = () => renderResult({ excludeText: line.text, quick: true });
+    }
+
+    function renderResult(opts) {
+      clearTimeout(revealTimer);
+      updateDots();
+      const excludeText = opts && opts.excludeText;
+      const line = pickLine(excludeText);
+      const who = state.answers.who || "忖度くん";
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const wait = reduce ? 0 : (opts && opts.quick ? 700 : 1200);
+      const veil = veilLines[Math.floor(Math.random() * veilLines.length)];
+      card.setAttribute("aria-busy", "true");
+      card.innerHTML =
+        '<div class="veil" role="status">' +
+          '<div class="orb" aria-hidden="true"></div>' +
+          '<p class="veil-text">' + veil + "</p>" +
+        "</div>";
+      revealTimer = setTimeout(() => showQuote(line, who), wait);
     }
 
     renderQuestion();
