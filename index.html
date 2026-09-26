@@ -10,19 +10,19 @@
     In-app copy reads that JSON. The title and social tags below repeat it for
     link previews, which do not run script.
   -->
-  <script type="application/json" id="brand">{"product":"魂のひとこと","channel":"ほんここチャンネル"}</script>
-  <meta name="description" content="魂のひとこと。直感で扉をひらくと、宇宙の静けさから、いまの魂へやさしい光の言葉が届きます。" />
-  <meta property="og:title" content="魂のひとこと — ほんここチャンネル" />
-  <meta property="og:description" content="魂のひとこと。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
+  <script type="application/json" id="brand">{"product":"天の声","channel":"ほんここチャンネル"}</script>
+  <meta name="description" content="天の声。直感で扉をひらくと、宇宙の静けさから、いまの魂へやさしい光の言葉が届きます。" />
+  <meta property="og:title" content="天の声 — ほんここチャンネル" />
+  <meta property="og:description" content="天の声。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:site_name" content="ほんここチャンネル" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="魂のひとこと — ほんここチャンネル" />
-  <meta name="twitter:description" content="魂のひとこと。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
-  <meta name="apple-mobile-web-app-title" content="魂のひとこと" />
+  <meta name="twitter:title" content="天の声 — ほんここチャンネル" />
+  <meta name="twitter:description" content="天の声。直感で選ぶだけ。守護と高次の静けさから、やさしい導きを受け取ります。" />
+  <meta name="apple-mobile-web-app-title" content="天の声" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233f3560'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23d4b36a' stroke-width='1.5'/%3E%3Cpath fill='%23f6e7c1' d='M38 16a16 16 0 1 0 0 32 12 12 0 1 1 0-32z'/%3E%3C/svg%3E" />
-  <title>魂のひとこと — ほんここチャンネル</title>
+  <title>天の声 — ほんここチャンネル</title>
   <style>
     :root {
       --bg: #f4efe8;
@@ -129,10 +129,10 @@
     }
     h1 {
       margin: 12px 0 0;
-      font-size: 1.55rem;
+      font-size: 2rem;
       font-weight: 700;
-      line-height: 1.4;
-      letter-spacing: 0.08em;
+      line-height: 1.35;
+      letter-spacing: 0.22em;
       text-wrap: balance;
     }
     .lead {
@@ -392,7 +392,7 @@
     <header>
       <p class="sigil" aria-hidden="true">✦　☾　✦</p>
       <div class="brand" data-brand="channel">ほんここチャンネル</div>
-      <h1 data-brand="product">魂のひとこと</h1>
+      <h1 data-brand="product">天の声</h1>
       <p class="lead">直感でひらく、光の導き</p>
       <p class="sub">直感で扉をひらいて。<br />宇宙の静けさから、いまのあなたへ。</p>
     </header>
@@ -409,7 +409,7 @@
       <noscript><p class="q-title">光の言葉を受け取るには、JavaScriptを有効にしてください。</p></noscript>
     </main>
 
-    <p class="foot"><span data-brand="product">魂のひとこと</span> · <span data-brand="channel">ほんここチャンネル</span><br />オリジナルの光の言葉<br />医療の助言でも、確約された予言でもありません。</p>
+    <p class="foot"><span data-brand="product">天の声</span> · <span data-brand="channel">ほんここチャンネル</span><br />オリジナルの光の言葉<br />医療の助言でも、確約された予言でもありません。</p>
   </div>
 
   <script>
@@ -1048,7 +1048,7 @@
     const whoChips = ["ハイヤーセルフ", "未来の自分", "お母さん", "ご先祖さま", "守護存在", "推し", "先生"];
 
     const veilLines = [
-      "宇宙の静けさに、耳を澄ませています…",
+      PRODUCT_NAME + "に、耳を澄ませています…",
       "光の層を、そっと開いています…",
       "守護の波動が、言葉を紡いでいます…",
       "高次のサインを、受け取っています…"
@@ -1120,7 +1120,7 @@
         ancestor: { open: "つながりのむこう、ご先祖の光より。", close: "あなたの足元は、もう祝福されている。" },
         higherSelf: { open: "高次のあなたから、地上のあなたへ。", close: "思い出すだけでいい。あなたは、すでに知っている。" },
         guide: { open: "守護の光が、静かに語りかける。", close: "あなたは、守られている。そのままで大丈夫。" },
-        honkoko: { open: "宇宙の静けさから。", close: "" },
+        honkoko: { open: PRODUCT_NAME + "が、静けさから届ける。", close: "" },
         custom: { open: name + "の波動を通して。", close: "—— " + name + "より、光を込めて。" }
       };
       const v = voices[kind] || voices.custom;
