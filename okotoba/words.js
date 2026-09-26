@@ -62,7 +62,7 @@ export const words = [
   {
     id: "imp-01",
     states: ["restless", "lost"],
-    toward: ["future", "self"],
+    toward: ["future"],
     teachings: ["impermanence"],
     text: "まだ形のない明日を、今日の手で固定しなくていい。雲は、名前がつく前に、すでに輪郭を変えている。"
   },
@@ -83,35 +83,35 @@ export const words = [
   {
     id: "imp-04",
     states: ["lost", "weary"],
-    toward: ["other", "future"],
+    toward: ["other"],
     teachings: ["impermanence"],
     text: "相手の心も、あなたの心も、止まった水ではない。昨日わかったつもりの人は、今日は別の岸に立っていることがある。"
   },
   {
     id: "imp-05",
     states: ["soft", "lost"],
-    toward: ["self", "other"],
+    toward: ["self"],
     teachings: ["impermanence"],
     text: "静けささえも、永遠の席には座らない。いま穏やかなら、その穏やかさを所有せず、通り過ぎる風として味わいなさい。"
   },
   {
     id: "imp-06",
     states: ["restless", "clinging"],
-    toward: ["past", "loss"],
+    toward: ["past"],
     teachings: ["impermanence"],
     text: "思い返すたびに、過去は少しずつ別の色になる。変わらない物語だと思っているものは、すでにあなたの中で移ろっている。"
   },
   {
     id: "imp-07",
     states: ["weary", "soft"],
-    toward: ["future", "loss"],
+    toward: ["future"],
     teachings: ["impermanence"],
     text: "先の荷物を、いまの体で運ばなくていい。まだ来ない日は、来るときに、その日の足で歩けばよい。"
   },
   {
     id: "imp-08",
     states: ["soft", "restless"],
-    toward: ["other", "past"],
+    toward: ["other"],
     teachings: ["impermanence"],
     text: "相手の様子が今日は違うなら、あなたへの否定とはかぎらない。人は、昨日の輪郭のままでは立っていられない。"
   },
@@ -125,14 +125,14 @@ export const words = [
   {
     id: "rel-02",
     states: ["restless", "clinging"],
-    toward: ["other", "future"],
+    toward: ["other"],
     teachings: ["release"],
     text: "相手を思いどおりの位置に置こうとする手を、いったん膝の上に戻しなさい。人は、あなたの掌の中の石ではない。"
   },
   {
     id: "rel-03",
     states: ["weary", "soft"],
-    toward: ["self", "past"],
+    toward: ["self"],
     teachings: ["release"],
     text: "正しさで自分を縛る縄は、自分で結んでいる。ほどくとき、誰かの許可は要らない。"
   },
@@ -146,42 +146,42 @@ export const words = [
   {
     id: "rel-05",
     states: ["soft", "weary"],
-    toward: ["past", "self"],
+    toward: ["self"],
     teachings: ["release"],
     text: "すでに手放しかけているなら、その手を、もう一度きつく閉じなくていい。緩んだまま、呼吸を通しなさい。"
   },
   {
     id: "rel-06",
     states: ["clinging", "lost"],
-    toward: ["past", "other"],
+    toward: ["past"],
     teachings: ["release"],
     text: "終わった場面の袖を、まだ引いていないか。幕が下りた舞台に、照明を戻さなくていい。"
   },
   {
     id: "rel-07",
     states: ["restless", "lost"],
-    toward: ["self", "future"],
+    toward: ["self"],
     teachings: ["release"],
     text: "頭の中の説明を、一つ止めてみなさい。わかろうとする手が忙しいとき、心は休まる場所を失う。"
   },
   {
     id: "rel-08",
     states: ["soft", "clinging"],
-    toward: ["future", "other"],
+    toward: ["future"],
     teachings: ["release"],
     text: "これからの予定を、いま全部決めきらなくていい。余白が残っているほうが、心は呼吸できる。"
   },
   {
     id: "com-01",
     states: ["weary", "soft"],
-    toward: ["self", "past"],
+    toward: ["self"],
     teachings: ["compassion"],
     text: "疲れた人を、さらに裁く必要はない。慈悲は、遠い誰かへの飾りではなく、いちばん近くの息づかいから始まる。"
   },
   {
     id: "com-02",
     states: ["restless", "lost"],
-    toward: ["other", "self"],
+    toward: ["other"],
     teachings: ["compassion"],
     text: "ざわつく相手を、敵の形にする前に、その人も痛みを抱えて立っていると見なさい。理解は、同意とは別のものだ。"
   },
@@ -195,7 +195,7 @@ export const words = [
   {
     id: "com-04",
     states: ["lost", "weary"],
-    toward: ["other", "future"],
+    toward: ["other"],
     teachings: ["compassion"],
     text: "誰かを助けようとして道に迷うとき、まず自分の足が地面についているかを見なさい。倒れている人のそばにいるには、あなたが立っている必要がある。"
   },
@@ -209,7 +209,7 @@ export const words = [
   {
     id: "com-06",
     states: ["weary", "clinging"],
-    toward: ["other", "loss"],
+    toward: ["other"],
     teachings: ["compassion"],
     text: "やさしさが枯れた日は、大きな善意を演じてなくていい。責めないこと。それだけで、慈悲は細く続いていける。"
   },
@@ -237,21 +237,21 @@ export const words = [
   {
     id: "min-02",
     states: ["lost", "weary"],
-    toward: ["self", "past"],
+    toward: ["self"],
     teachings: ["mindfulness"],
     text: "迷いの最中でも、足の裏が床に触れていることは残っている。考えが霧でも、足の裏の感覚ははっきりしている。"
   },
   {
     id: "min-03",
     states: ["soft", "weary"],
-    toward: ["self", "other"],
+    toward: ["self"],
     teachings: ["mindfulness"],
     text: "すでに静かなら、その静けさを改良しなくていい。気づいているということ自体が、もう道の上にいる印だ。"
   },
   {
     id: "min-04",
     states: ["weary", "restless"],
-    toward: ["past", "loss"],
+    toward: ["past"],
     teachings: ["mindfulness"],
     text: "疲れているとき、昔の場面はくり返しやすくなる。くり返しが始まったと気づいた瞬間、あなたはそれを見ている側に戻れる。"
   },
@@ -265,14 +265,14 @@ export const words = [
   {
     id: "min-06",
     states: ["restless", "soft"],
-    toward: ["self", "future"],
+    toward: ["self"],
     teachings: ["mindfulness"],
     text: "考えが走るのを、止めようとしなくていい。走っていると知っているなら、あなたは走りそのものではない。"
   },
   {
     id: "min-07",
     states: ["lost", "clinging"],
-    toward: ["future", "other"],
+    toward: ["future"],
     teachings: ["mindfulness"],
     text: "先が見えないままでも、次の一歩の感触だけはわかる。気づきは、地図を完成させることより、いま踏んでいる地面を認めることだ。"
   },
@@ -293,7 +293,7 @@ export const words = [
   {
     id: "mid-02",
     states: ["clinging", "weary"],
-    toward: ["self", "past"],
+    toward: ["self"],
     teachings: ["middle"],
     text: "自分を高めようと張る端と、自分を責めようと沈む端。そのあいだに、今日のあなたがただ立っていられる幅がある。"
   },
@@ -307,7 +307,7 @@ export const words = [
   {
     id: "mid-04",
     states: ["weary", "soft"],
-    toward: ["self", "future"],
+    toward: ["self"],
     teachings: ["middle"],
     text: "休むことを怠けだと思い、動くことだけを善だと思い込んでいないか。疲れた体には休みがちょうどよく、戻った体には動きがちょうどよい。"
   },
@@ -321,7 +321,7 @@ export const words = [
   {
     id: "mid-06",
     states: ["clinging", "lost"],
-    toward: ["loss", "future"],
+    toward: ["loss"],
     teachings: ["middle"],
     text: "すべてを保てという声と、すべてを捨てよという声。両方に従わなくていい。いま要るものだけを残し、残りは季節に返しなさい。"
   },
@@ -335,14 +335,14 @@ export const words = [
   {
     id: "mid-08",
     states: ["restless", "soft"],
-    toward: ["loss", "other"],
+    toward: ["loss"],
     teachings: ["middle"],
     text: "取り戻そうと走る端と、もう何も持つまいと捨てる端。失ったあとに要るのは、どちらの端でもなく、今日使う分だけの手だ。"
   },
   {
     id: "suf-01",
     states: ["weary", "clinging"],
-    toward: ["self", "past"],
+    toward: ["self"],
     teachings: ["suffering"],
     text: "苦しみは、あなたが欠けている証拠ではない。熱いものを握り続けている手の、正直な熱だ。ほどけるとは、その指を一本ずつ開くことだ。"
   },
@@ -356,7 +356,7 @@ export const words = [
   {
     id: "suf-03",
     states: ["clinging", "restless"],
-    toward: ["loss", "past"],
+    toward: ["loss"],
     teachings: ["suffering"],
     text: "失うこと自体が、刃のすべてではない。失ってはならない、という握りが、刃に力を加えている。握りが緩むと、痛みは痛みの大きさに戻る。"
   },
@@ -370,7 +370,7 @@ export const words = [
   {
     id: "suf-05",
     states: ["lost", "weary"],
-    toward: ["self", "future"],
+    toward: ["self"],
     teachings: ["suffering"],
     text: "なぜ苦しいのかがわからなくても、苦しいという感覚は確かだ。原因の名前を待たずに、まずは荷を床に置いてよい。"
   },
@@ -384,14 +384,14 @@ export const words = [
   {
     id: "suf-07",
     states: ["soft", "lost"],
-    toward: ["self", "other"],
+    toward: ["self"],
     teachings: ["suffering"],
     text: "苦しみが薄い日を、自分の手柄にしなくていい。軽い状態を、次の備えに使わなくていい。ただ、軽いままにしておきなさい。"
   },
   {
     id: "suf-08",
     states: ["clinging", "lost"],
-    toward: ["other", "past"],
+    toward: ["other"],
     teachings: ["suffering"],
     text: "相手を許せない苦しさは、あなたが冷たい証拠ではない。まだ熱い場所が残っているという知らせだ。熱いまま、距離を置いてよい。"
   }
